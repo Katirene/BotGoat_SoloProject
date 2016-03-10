@@ -1,3 +1,3 @@
-web:    node app.js
-worker: node bot.js
+web:    node ./server/app.js
+worker: node postTime.js
 clock:  node clock.js
