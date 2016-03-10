@@ -1,3 +1,3 @@
-web:    node ./server/app.js
+web:    node app.js
 worker: node postTime.js
 clock:  node clock.js
