@@ -1,0 +1,28 @@
+{
+  "name": "mkproj_solo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./server/app.js"
+  },
+  "author": "KAT",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.5.0",
+    "angular-animate": "^1.5.0",
+    "angular-bootstrap-npm": "^0.14.3",
+    "angular-route": "^1.5.0",
+    "body-parser": "^1.15.0",
+    "bootstrap": "^3.3.6",
+    "cron": "^1.1.0",
+    "css": "^2.2.1",
+    "express": "^4.13.4",
+    "express-route": "^0.1.4",
+    "later": "^1.2.0",
+    "node": "0.0.0",
+    "router": "^1.1.4",
+    "twit": "^2.2.3"
+  }
+}
