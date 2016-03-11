@@ -91,16 +91,16 @@ router.post('/', function(req, res) {
     job.cronTime = cronData;
     job.onTick = function () {twitterPost(tweet)};
 
-    new CronJob(job);
 
     console.log(CronJob);
 
-    function twitterPost(tweet) {
-        T.post('statuses/update', tweet, tweeted);
-        counter++;
-    }
+    });
 
-});
+new CronJob(job);
+
+function twitterPost(tweet) {
+    T.post('statuses/update', tweet, tweeted);
+    counter++;
 
 function tweeted(err, data, response) {
     if (data) {
