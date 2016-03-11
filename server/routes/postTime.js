@@ -38,13 +38,11 @@ router.post('/', function(req, res) {
 
 
     clock.cronTime = cronData;
-    clock.onTick = function () {
-        twitterPost(tweet)
-    };
+    clock.onTick = function () {twitterPost(tweet)};
 
     new CronJob(clock);
 
-    while (pause == 'pause') {
+    while (pause !== 'pause') {
         process.nextTick(function twitterPost(tweet) {
             T.post('statuses/update', tweet, tweeted);
             counter++;
