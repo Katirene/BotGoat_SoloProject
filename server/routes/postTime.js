@@ -2,7 +2,7 @@ var express = require('express');
 var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
-var Twit = require('Twit');
+var Twit = require('twit');
 var CronJob = require('cron').CronJob;
 var clock = require('../clock.js');
 
