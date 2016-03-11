@@ -88,7 +88,7 @@ router.post('/', function(req, res) {
         status: postTimeStatus
     };
 
-    job.cronTime = cronData;
+    job.cronTime = toString(cronData);
     job.onTick = function () {twitterPost(tweet)};
 
     createCron(job);
