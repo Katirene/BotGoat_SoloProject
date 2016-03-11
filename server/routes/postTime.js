@@ -24,6 +24,7 @@ var counter = 0;
 router.post('/', function(req, res) {
     console.log(req.body);
 
+    var pause = req.body.pause;
 
     var cronData = req.body.cronData;
 
@@ -35,17 +36,19 @@ router.post('/', function(req, res) {
         status: postTimeStatus
     };
 
-    clock.cronTime = cronData;
-    clock.onTick = function() {twitterPost(tweet)};
 
-    console.log(clock);
+    clock.cronTime = cronData;
+    clock.onTick = function () {
+        twitterPost(tweet)
+    };
 
     new CronJob(clock);
 
-    function twitterPost(tweet) {
-        console.log(tweet);
-        T.post('statuses/update', tweet, tweeted);
-        counter++;
+    while (pause == 'pause') {
+        process.nextTick(function twitterPost(tweet) {
+            T.post('statuses/update', tweet, tweeted);
+            counter++;
+    });
     }
 });
 
