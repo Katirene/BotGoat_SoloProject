@@ -28,7 +28,7 @@ var currentCron = '';
 router.post('/', function(req, res) {
     console.log(req.body);
 
-    var pause = req.body.pause;
+    //var pause = req.body.pause;
 
     exports.cronData = req.body.cronData;
 
