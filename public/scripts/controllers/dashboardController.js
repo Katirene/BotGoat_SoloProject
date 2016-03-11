@@ -2,8 +2,6 @@ myApp.controller('DashboardController', function ($scope, $http) {
 
     console.log('In Dashboard Controller');
 
-    var pause = {pause: "pause"};
-
     $scope.hourTweet = '';
     $scope.myCronOutput = '';
 
@@ -23,15 +21,14 @@ myApp.controller('DashboardController', function ($scope, $http) {
         postTime(hourTweet);
     };
 
+    $scope.pause = function() {
+        var pause = {pause: "pause"};
+        postTime(pause);
+    };
+
     //hourTweet is the object that has 2 properties. hour: sets the interval of time, hourTweet sets the status.
     function postTime(hourTweet) {
         $http.post('/postTime', hourTweet).then(function() {
-            console.log('Tweet with time interval has been send to Server')
-        });
-    }
-
-    $scope.pause = function(pause) {
-        $http.post('/postTime', pause).then(function() {
             console.log('Tweet with time interval has been send to Server')
         });
     }
