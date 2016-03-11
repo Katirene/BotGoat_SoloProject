@@ -31,8 +31,6 @@ router.post('/', function(req, res) {
 
     var cronData = req.body.cronData;
 
-    module.exports.cronData = cronData;
-
     var postTimeStatus = req.body.hourTweet;
 
     postTimeStatus = postTimeStatus + counter;
@@ -41,7 +39,7 @@ router.post('/', function(req, res) {
         status: postTimeStatus
     };
 
-    //clock.cronTime = cronData;
+    clock.cronTime = cronData;
     clock.onTick = function () {twitterPost(tweet)};
 
     new CronJob(clock);
@@ -49,7 +47,7 @@ router.post('/', function(req, res) {
     function twitterPost(tweet) {
     T.post('statuses/update', tweet, tweeted);
     counter++;
-    };
+    }
 
 });
 
