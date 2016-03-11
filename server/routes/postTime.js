@@ -67,9 +67,9 @@ var counter = 0;
 var job = {
     cronTime: '',
     onTick: function(){},
-    start: false,
-    timeZone: "America/Los_Angeles",
-    runOnInit: true
+    start: true,
+    timeZone: "America/Los_Angeles"
+
 };
 
 
