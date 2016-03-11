@@ -19,7 +19,7 @@ var T = new Twit({
     access_token_secret:  process.env.accessTokenSecret
 });
 
-var cronData = '';
+
 
 var counter = 0;
 
@@ -29,7 +29,9 @@ router.post('/', function(req, res) {
 
     //var pause = req.body.pause;
 
-    exports.cronData = req.body.cronData;
+    var cronData = req.body.cronData;
+
+    module.exports.cronData = cronData;
 
     var postTimeStatus = req.body.hourTweet;
 
