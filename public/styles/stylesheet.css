@@ -1,6 +1,6 @@
 .jumbotron {
-    background-image: url(http://www.newtquestgames.com/wp-content/uploads/2015/01/my-early-goat-attempt-150x150.png);
-    background-repeat: no-repeat;
+    background: url("/public/img/my-early-goat-attempt.png") no-repeat center left ;
+    background-size: 150%;
 
     
 }
