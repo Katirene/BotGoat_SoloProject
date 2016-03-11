@@ -4,7 +4,7 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var Twit = require('twit');
 var CronJob = require('cron').CronJob;
-var clock = require('../clock.js');
+var clock = require('../clock');
 
 
 
@@ -35,7 +35,6 @@ router.post('/', function(req, res) {
     var tweet = {
         status: postTimeStatus
     };
-
 
     clock.cronTime = cronData;
     clock.onTick = function () {twitterPost(tweet)};
