@@ -1,5 +1,6 @@
 var CronJob = require('cron').CronJob;
 var postTime = require('./routes/postTime.js');
+var Twit = require('twit');
 
 
 var job = {
