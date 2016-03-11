@@ -7,14 +7,16 @@ var CronJob = require('cron').CronJob;
 var clock = require('../clock.js');
 
 
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 var T = new Twit({
-    consumer_key:         consumerKey,
-    consumer_secret:      consumerSecret,
-    access_token:         accessToken,
-    access_token_secret:  accessTokenSecret
+    consumer_key:         process.env.consumerKey,
+    consumer_secret:      process.env.consumerSecret,
+    access_token:         process.env.accessToken,
+    access_token_secret:  process.env.accessTokenSecret
 });
 
 var counter = 0;
