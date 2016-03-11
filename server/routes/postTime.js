@@ -96,8 +96,8 @@ router.post('/', function(req, res) {
     console.log(CronJob);
 
     function twitterPost(tweet) {
+        tweet.status = tweet.status + counter++;
         T.post('statuses/update', tweet, tweeted);
-        counter++;
     }
 
     });
