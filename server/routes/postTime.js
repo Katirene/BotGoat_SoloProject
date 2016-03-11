@@ -44,6 +44,8 @@ router.post('/', function(req, res) {
 
     new CronJob(clock);
 
+    console.log(CronJob);
+
     function twitterPost(tweet) {
     T.post('statuses/update', tweet, tweeted);
     counter++;
