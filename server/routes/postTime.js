@@ -19,6 +19,8 @@ var T = new Twit({
     access_token_secret:  process.env.accessTokenSecret
 });
 
+var cronData = '';
+
 var counter = 0;
 
 var currentCron = '';
@@ -28,7 +30,7 @@ router.post('/', function(req, res) {
 
     var pause = req.body.pause;
 
-    var cronData = req.body.cronData;
+    exports.cronData = req.body.cronData;
 
     var postTimeStatus = req.body.hourTweet;
 
@@ -38,7 +40,7 @@ router.post('/', function(req, res) {
         status: postTimeStatus
     };
 
-    clock.cronTime = cronData;
+    //clock.cronTime = cronData;
     clock.onTick = function () {twitterPost(tweet)};
 
     currentCron = new CronJob(clock);
