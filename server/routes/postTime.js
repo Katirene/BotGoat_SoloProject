@@ -21,6 +21,8 @@ var T = new Twit({
 
 var counter = 0;
 
+var currentCron = '';
+
 router.post('/', function(req, res) {
     console.log(req.body);
 
@@ -39,14 +41,13 @@ router.post('/', function(req, res) {
     clock.cronTime = cronData;
     clock.onTick = function () {twitterPost(tweet)};
 
-    new CronJob(clock);
+    currentCron = new CronJob(clock);
 
-    while (pause !== 'pause') {
-        process.nextTick(function twitterPost(tweet) {
-            T.post('statuses/update', tweet, tweeted);
-            counter++;
-    });
-    }
+    function twitterPost(tweet) {
+    T.post('statuses/update', tweet, tweeted);
+    counter++;
+    };
+
 });
 
 
