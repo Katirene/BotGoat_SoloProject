@@ -101,6 +101,7 @@ new CronJob(job);
 function twitterPost(tweet) {
     T.post('statuses/update', tweet, tweeted);
     counter++;
+}
 
 function tweeted(err, data, response) {
     if (data) {
