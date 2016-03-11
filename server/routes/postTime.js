@@ -80,27 +80,22 @@ router.post('/', function(req, res) {
 
     var cronData = req.body.cronData;
 
-    var postTimeStatus = req.body.hourTweet;
-
-    postTimeStatus = postTimeStatus + counter;
-
-    var tweet = {
-        status: postTimeStatus
-    };
+    var statusText = req.body.hourTweet;
 
     job.cronTime = cronData;
-    job.onTick = function () {twitterPost(tweet)};
+    job.onTick = twitterPost;
 
     new CronJob(job);
 
     console.log(CronJob);
 
-    function twitterPost(tweet) {
-        tweet.status = tweet.status + counter++;
+
+    function twitterPost() {
+        var tweet = { status: ''};
+        tweet.status = statusText + counter++;
         T.post('statuses/update', tweet, tweeted);
     }
-
-    });
+});
 
 
 function tweeted(err, data, response) {
