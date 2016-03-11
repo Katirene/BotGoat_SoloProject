@@ -4,9 +4,7 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var Twit = require('twit');
 var CronJob = require('cron').CronJob;
-var clock = require('../clock');
-
-
+//var clock = require('../clock');
 
 
 app.use(bodyParser.json());
@@ -24,10 +22,61 @@ var T = new Twit({
 var counter = 0;
 
 
+//router.post('/', function(req, res) {
+//    console.log(req.body);
+//
+//    //var pause = req.body.pause;
+//
+//    var cronData = req.body.cronData;
+//
+//    var postTimeStatus = req.body.hourTweet;
+//
+//    postTimeStatus = postTimeStatus + counter;
+//
+//    var tweet = {
+//        status: postTimeStatus
+//    };
+//
+//    clock.cronTime = cronData;
+//    clock.onTick = function () {twitterPost(tweet)};
+//
+//    new CronJob(clock);
+//
+//    console.log(CronJob);
+//
+//    function twitterPost(tweet) {
+//    T.post('statuses/update', tweet, tweeted);
+//    counter++;
+//    }
+//
+//});
+//
+//
+//
+//function tweeted(err, data, response) {
+//    if (data) {
+//        console.log("Data:", data);
+//    } else if (err) {
+//        console.log("Err:", err);
+//    }
+//}
+
+//module.exports = router;
+
+
+var job = {
+    cronTime: '',
+    onTick: function(){},
+    start: false,
+    timeZone: "America/Los_Angeles",
+    runOnInit: true
+};
+
+
+
+//Post without using workers and clocks
 router.post('/', function(req, res) {
     console.log(req.body);
-
-    //var pause = req.body.pause;
 
     var cronData = req.body.cronData;
 
@@ -39,21 +88,19 @@ router.post('/', function(req, res) {
         status: postTimeStatus
     };
 
-    clock.cronTime = cronData;
-    clock.onTick = function () {twitterPost(tweet)};
+    job.cronTime = cronData;
+    job.onTick = function () {twitterPost(tweet)};
 
-    new CronJob(clock);
+    new CronJob(job);
 
-    console.log(CronJob.CronJob);
+    console.log(CronJob);
 
     function twitterPost(tweet) {
-    T.post('statuses/update', tweet, tweeted);
-    counter++;
+        T.post('statuses/update', tweet, tweeted);
+        counter++;
     }
 
 });
-
-
 
 function tweeted(err, data, response) {
     if (data) {
@@ -67,17 +114,3 @@ module.exports = router;
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-//module.exports.router = router.tweet;
-//module.exports.router = router.cronData;
-//module.exports = router;
