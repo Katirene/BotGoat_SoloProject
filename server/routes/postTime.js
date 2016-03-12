@@ -33,6 +33,7 @@ var counter = 0;
 //toggle the currentCron to stop on true.
 
 router.put('/', function(req, res) {
+    console.log("pause button:", req.body);
     var pause = req.body.pause;
     if (pause == true) {
         currentCron.stop();
