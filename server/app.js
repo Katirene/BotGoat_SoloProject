@@ -3,6 +3,7 @@ var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
 var postTime = require('./routes/postTime');
+var pause = require('./routes/postTime/pause');
 
 
 app.use(bodyParser.json());
@@ -11,7 +12,7 @@ app.use(bodyParser.urlencoded({expanded: true}));
 app.set('port', process.env.PORT || 5000);
 
 app.use('/postTime', postTime);
-app.use('/postTime/pause', postTime);
+app.use('/postTime/pause', pause);
 
 
 app.use(express.static('public'));
