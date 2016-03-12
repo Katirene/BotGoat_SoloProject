@@ -5,7 +5,7 @@ var bodyParser = require('body-parser');
 var Twit = require('twit');
 var CronJob = require('cron').CronJob;
 //var clock = require('../clock');
-var job = require('/clock');
+//var job = require('../clock');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -17,6 +17,15 @@ var T = new Twit({
     access_token_secret:  process.env.accessTokenSecret
 });
 
+var job = {
+    cronTime: cronData,
+    onTick: function(){},
+    start: true,
+    timeZone: "America/Los_Angeles",
+    runOnInit: false
+};
+
+var cronData = '';
 var currentCron = null;
 var counter = 0;
 
@@ -41,7 +50,7 @@ var counter = 0;
 router.post('/', function(req, res) {
     console.log(req.body);
 
-    var cronData = req.body.cronData;
+    cronData = req.body.cronData;
 
     var statusText = req.body.hourTweet;
 
