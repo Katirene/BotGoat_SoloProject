@@ -4,8 +4,8 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var Twit = require('twit');
 var CronJob = require('cron').CronJob;
-var clock = require('../clock');
-
+//var clock = require('../clock');
+var job = require('/clock');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -37,6 +37,7 @@ var counter = 0;
 
 
 //Post without using workers and clocks
+
 router.post('/', function(req, res) {
     console.log(req.body);
 
