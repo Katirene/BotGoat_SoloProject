@@ -4,8 +4,6 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var Twit = require('twit');
 var CronJob = require('cron').CronJob;
-//var clock = require('../clock');
-//var job = require('../clock');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -33,15 +31,16 @@ var counter = 0;
 
 //need to finish this post end point that accepts the true and false on req.body.pause
 //toggle the currentCron to stop on true.
-//router.put('/', function(req, res) {
-//    var pause = req.body.pause;
-//    if (pause == true) {
-//        currentCron.stop();
-//    } else {
-//        currentCron.start();
-//    }
-//
-//});
+
+router.put('/', function(req, res) {
+    var pause = req.body.pause;
+    if (pause == true) {
+        currentCron.stop();
+    } else {
+        currentCron.start();
+    }
+
+});
 
 
 
