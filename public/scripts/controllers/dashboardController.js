@@ -2,6 +2,8 @@ myApp.controller('DashboardController', function ($scope, $http) {
 
     console.log('In Dashboard Controller');
 
+    var pause = false;
+
     $scope.hourTweet = '';
     $scope.myCronOutput = '';
 
@@ -22,8 +24,12 @@ myApp.controller('DashboardController', function ($scope, $http) {
     };
 
     $scope.pause = function() {
-        var pause = {pause: "true"};
-        postTime(pause);
+        if (pause == false) {
+            var pause = {pause: "true"};
+        } else {
+            var pause = {pause: "false"};
+        }
+        pauseBot(pause);
     };
 
     //hourTweet is the object that has 2 properties. hour: sets the interval of time, hourTweet sets the status.
@@ -35,5 +41,11 @@ myApp.controller('DashboardController', function ($scope, $http) {
 
 
  //need to build out a function for pause//
+
+    function pauseBot(pause) {
+        $http.post('/postTime/pause', pause).then(function() {
+            console.log('Pause info sent to server')
+        });
+    }
 
 });
