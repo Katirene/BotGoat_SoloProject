@@ -36,7 +36,6 @@ router.put('/', function(req, res) {
 
 
 
-
 //Post without using workers and clocks
 router.post('/', function(req, res) {
     console.log(req.body);

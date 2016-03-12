@@ -3,7 +3,6 @@ var app = express();
 var router = express.Router();
 var bodyParser = require('body-parser');
 var postTime = require('./routes/postTime');
-var pause = require('./routes/postTime');
 
 
 app.use(bodyParser.json());
