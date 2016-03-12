@@ -20,6 +20,7 @@
     "css": "^2.2.1",
     "express": "^4.13.4",
     "express-route": "^0.1.4",
+    "express-router": "0.0.1",
     "later": "^1.2.0",
     "node": "0.0.0",
     "router": "^1.1.4",
