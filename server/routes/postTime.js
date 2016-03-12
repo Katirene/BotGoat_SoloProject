@@ -17,60 +17,18 @@ var T = new Twit({
     access_token_secret:  process.env.accessTokenSecret
 });
 
-
-
+var currentCron = null;
 var counter = 0;
 
 
-//router.post('/', function(req, res) {
-//    console.log(req.body);
-//
-//    //var pause = req.body.pause;
-//
-//    var cronData = req.body.cronData;
-//
-//    var postTimeStatus = req.body.hourTweet;
-//
-//    postTimeStatus = postTimeStatus + counter;
-//
-//    var tweet = {
-//        status: postTimeStatus
-//    };
-//
-//    clock.cronTime = cronData;
-//    clock.onTick = function () {twitterPost(tweet)};
-//
-//    new CronJob(clock);
-//
-//    console.log(CronJob);
-//
-//    function twitterPost(tweet) {
-//    T.post('statuses/update', tweet, tweeted);
-//    counter++;
-//    }
-//
-//});
-//
-//
-//
-//function tweeted(err, data, response) {
-//    if (data) {
-//        console.log("Data:", data);
-//    } else if (err) {
-//        console.log("Err:", err);
-//    }
-//}
 
-//module.exports = router;
+//need to finish this post end point that accepts the true and false on req.body.pause
+//toggle the currentCron to stop on true.
+router.post('/pause', function(req, res) {
+    currentCron.stop
 
+});
 
-var job = {
-    cronTime: '',
-    onTick: function(){},
-    start: true,
-    timeZone: "America/Los_Angeles"
-
-};
 
 
 
@@ -85,10 +43,11 @@ router.post('/', function(req, res) {
     job.cronTime = cronData;
     job.onTick = twitterPost;
 
-    new CronJob(job);
+    currentCron = new CronJob(job);
+
+
 
     console.log(CronJob);
-
 
     function twitterPost() {
         var tweet = { status: ''};

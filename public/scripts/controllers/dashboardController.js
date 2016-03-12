@@ -22,7 +22,7 @@ myApp.controller('DashboardController', function ($scope, $http) {
     };
 
     $scope.pause = function() {
-        var pause = {pause: "pause"};
+        var pause = {pause: "true"};
         postTime(pause);
     };
 
@@ -34,26 +34,6 @@ myApp.controller('DashboardController', function ($scope, $http) {
     }
 
 
-    ////time picker controller
-    //var that = this;
-    //
-    //this.isOpen = false;
-    //
-    //this.openCalendar = function(e) {
-    //    e.preventDefault();
-    //    e.stopPropagation();
-    //
-    //    that.isOpen = true;
-    //};
-    //
-    //////function for dropdown menu
-    ////function MyCtrl($scope) {
-    ////
-    ////    //$scope.list = [1,2,3, 4];
-    //
-    //    $scope.current = 0;
-    //
-    ////}
-
+ //need to build out a function for pause//
 
 });
