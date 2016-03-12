@@ -12,7 +12,6 @@ app.use(bodyParser.urlencoded({expanded: true}));
 app.set('port', process.env.PORT || 5000);
 
 app.use('/postTime', postTime);
-app.use('/postTime/pause', pause);
 
 
 app.use(express.static('public'));

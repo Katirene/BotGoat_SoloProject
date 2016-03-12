@@ -24,7 +24,7 @@ var counter = 0;
 
 //need to finish this post end point that accepts the true and false on req.body.pause
 //toggle the currentCron to stop on true.
-router.post('/pause', function(req, res) {
+router.put('/', function(req, res) {
     var pause = req.body.pause;
     if (pause == true) {
         currentCron.stop();

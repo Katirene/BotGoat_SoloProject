@@ -43,7 +43,7 @@ myApp.controller('DashboardController', function ($scope, $http) {
  //need to build out a function for pause//
 
     function pauseBot(pause) {
-        $http.post('/postTime/pause', pause).then(function() {
+        $http.put('/postTime', pause).then(function() {
             console.log('Pause info sent to server')
         });
     }
