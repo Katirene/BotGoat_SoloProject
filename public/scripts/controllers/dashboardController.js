@@ -8,7 +8,7 @@ myApp.controller('DashboardController', function ($scope, $http) {
 
     $scope.hourTweet = '';
     $scope.myCronOutput = '';
-    $scope.latestTweet = '';
+    $scope.latestTweet = 'Your Bots Latest Tweet';
 
     $scope.myConfig = {
         options: {
@@ -54,6 +54,7 @@ myApp.controller('DashboardController', function ($scope, $http) {
     function getLatestTweet() {
         $http.get('/postTime').then(function(response) {
            console.log(response.data);
+            $scope.latestTweet = response.data;
 
         });
     }
