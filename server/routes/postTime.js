@@ -53,7 +53,8 @@ router.put('/', function(req, res) {
 
 router.get('/', function(req, res) {
     T.get('/statuses/user_timeline', params, function() {
-        console.log(data);
+        console.log(res);
+        console.log(res.data);
         var tweets = data.statuses;
         res.send(tweets);
     });
