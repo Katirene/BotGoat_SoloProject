@@ -1,11 +1,14 @@
 myApp.controller('DashboardController', function ($scope, $http) {
 
+    getLatestTweet();
+
     console.log('In Dashboard Controller');
 
     var pause = false;
 
     $scope.hourTweet = '';
     $scope.myCronOutput = '';
+    $scope.latestTweet = '';
 
     $scope.myConfig = {
         options: {
@@ -48,5 +51,11 @@ myApp.controller('DashboardController', function ($scope, $http) {
         });
     }
 
+    function getLatestTweet() {
+        $http.get('/postTime').then(function(response) {
+           console.log(response.data);
+
+        });
+    }
 
 });

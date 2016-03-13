@@ -34,11 +34,13 @@ var counter = 0;
 
 router.put('/', function(req, res) {
     console.log("pause button:", req.body);
-    var pause = req.body.pause;
-    if (pause == true) {
-        currentCron.stop();
-    } else {
-        currentCron.start();
+    if (currentCron != null) {
+        var pause = req.body.pause;
+        if (pause == true) {
+            currentCron.stop();
+        } else {
+            currentCron.start();
+        }
     }
 
 });
