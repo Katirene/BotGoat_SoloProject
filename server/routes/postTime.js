@@ -60,7 +60,7 @@ function getTweet() {
             console.log("error getting latest tweet");
         } else {
             console.log(data);
-            tweets = data[0];
+            tweets = data;
         }
     });
 }
