@@ -59,8 +59,8 @@ function getTweet() {
         if (err) {
             console.log("error getting latest tweet");
         } else {
-            console.log(data);
-            tweets = data;
+            console.log("here is the data:", data);
+            tweets = data[0];
         }
     });
 }
@@ -78,8 +78,8 @@ router.get('/', function(req, res) {
                 }
             });
     }
-    console.log(tweets[0].status.text);
-    res.send(tweets[0].status.text);
+    console.log("here is the tweets:", tweets);
+    res.send(tweets.status.text);
 });
 
 
