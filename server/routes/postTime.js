@@ -52,15 +52,19 @@ router.put('/', function(req, res) {
 });
 
 
-var tweets = [];
+var botData;
 
 function getTweet() {
     T.get('/statuses/user_timeline', params).then(function (err, data, response) {
         if (err) {
             console.log("error getting latest tweet");
         } else {
-            console.log("here is the data:", data);
-            tweets = data[0];
+            botData = {
+                baseTweet       : data.statuses[0].text.toLowerCase(),
+                tweetID         : data.statuses[0].id_str,
+                tweetUsername   : data.statuses[0].user.screen_name
+            };
+            console.log("here is the botData:", botData);
         }
     });
 }
@@ -78,8 +82,8 @@ router.get('/', function(req, res) {
                 }
             });
     }
-    console.log("here is the tweets:", tweets);
-    res.send(tweets.status.text);
+    console.log("here are the botData in router:", botData);
+    res.send(botData);
 });
 
 
