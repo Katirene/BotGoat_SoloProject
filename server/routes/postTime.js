@@ -56,7 +56,9 @@ router.get('/', function(req, res) {
 });
 
 function gotData(err, data, response) {
-    console.log(data)
+    console.log(data);
+    var tweets = data.statuses;
+    res.send(tweets);
 }
 
 
