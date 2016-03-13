@@ -57,6 +57,7 @@ router.get('/', function(req, res) {
         console.log(data);
         tweets = data[0];
     });
+    console.log(tweets);
     return promise;
     res.json(tweets);
 });
