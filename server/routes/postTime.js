@@ -53,13 +53,19 @@ router.put('/', function(req, res) {
 
 router.get('/', function(req, res) {
     var tweets = null;
-    var promise = T.get('/statuses/user_timeline', params, function(err, data, response) {
-        console.log(data);
-        tweets = data[0];
+    var promise = T.get('/statuses/user_timeline', params).then(function(err, data, response) {
+        if (err) {
+            console.log("error getting latest tweet");
+        } else {
+            console.log(data);
+            tweets = data[0];
+        }
+        return promise;
     });
     console.log(tweets);
-    return promise;
-    res.json(tweets);
+    promise.done(function(tweets) {
+        res.json(tweets);
+    });
 });
 
 
