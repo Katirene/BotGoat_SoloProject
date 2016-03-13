@@ -48,48 +48,41 @@ router.put('/', function(req, res) {
             currentCron.start();
         }
     }
-
+    res.status(200).end();
 });
 
 
-var botData;
+var botData = null;
 
 function getTweet() {
-    T.get('/statuses/user_timeline', params).then(function (err, data, response) {
-        if (response.statusCode === 200) {
-            //var result = JSON.parse(data);
+    console.log('getTweet()');
+
+    var promise = T.get('/statuses/user_timeline', params)
+                .then(function (result) {
+
+        if (result.resp.statusCode == 200) {
+            console.log('getTweet(): Got 200 response');
+
             botData = {
-                baseTweet       : data.statuses[0].text.toLowerCase(),
-                tweetID         : data.statuses[0].id_str,
-                tweetUsername   : data.statuses[0].user.screen_name
+                baseTweet: result.data[0].text,
+                tweetID: result.data[0].id_str,
+                tweetUsername: result.data[0].user.screen_name
             };
             console.log("here is the botData:", botData);
         } else {
-            console.log("status code was not 200");
+            console.log("getTweet(): Got non-200 response");
         }
     });
+
+    return promise;
 }
 
 router.get('/', function(req, res) {
-    function run() {
-        async.waterfall([
-                getTweet
-            ],
-            function(err, botData) {
-                if (err) {
-                    console.log("error in getting data")
-                } else {
-                    console.log("Tweet got")
-                }
-            });
-    }
-    console.log("here are the botData in router:", botData);
-    res.send(botData);
+    getTweet().then(function(result) {
+        console.log("here are the botData in router:", botData);
+        res.send(botData);
+    });
 });
-
-
-
-
 
 
 //Post without using workers and clocks
@@ -106,8 +99,6 @@ router.post('/', function(req, res) {
 
     currentCron = new CronJob(job);
 
-
-
     console.log(CronJob);
 
     function twitterPost() {
@@ -115,6 +106,7 @@ router.post('/', function(req, res) {
         tweet.status = statusText + counter++;
         T.post('statuses/update', tweet, tweeted);
     }
+    res.status(200).end();
 });
 
 
@@ -127,6 +119,3 @@ function tweeted(err, data, response) {
 }
 
 module.exports = router;
-
-
-
