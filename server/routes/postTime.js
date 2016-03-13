@@ -55,7 +55,7 @@ router.get('/', function(req, res) {
     var tweets = null;
     T.get('/statuses/user_timeline', params, function(err, data, response) {
         console.log(data);
-        tweets = data.statuses;
+        tweets = data.text;
         for (var i = 0; 1 < tweets.legnth; i++) {
             console.log(tweets[i].text);
         }
