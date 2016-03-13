@@ -57,7 +57,7 @@ var botData;
 function getTweet() {
     T.get('/statuses/user_timeline', params).then(function (err, data, response) {
         if (response.statusCode === 200) {
-            var result = JSON.parse(data);
+            //var result = JSON.parse(data);
             botData = {
                 baseTweet       : data.statuses[0].text.toLowerCase(),
                 tweetID         : data.statuses[0].id_str,
@@ -77,7 +77,7 @@ router.get('/', function(req, res) {
             ],
             function(err, botData) {
                 if (err) {
-                    console.log("error in geting data")
+                    console.log("error in getting data")
                 } else {
                     console.log("Tweet got")
                 }
