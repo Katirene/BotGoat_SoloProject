@@ -56,15 +56,16 @@ var botData;
 
 function getTweet() {
     T.get('/statuses/user_timeline', params).then(function (err, data, response) {
-        if (err) {
-            console.log("error getting latest tweet");
-        } else {
+        if (response.statusCode === 200) {
+            var result = JSON.parse(data);
             botData = {
                 baseTweet       : data.statuses[0].text.toLowerCase(),
                 tweetID         : data.statuses[0].id_str,
                 tweetUsername   : data.statuses[0].user.screen_name
             };
             console.log("here is the botData:", botData);
+        } else {
+            console.log("status code was not 200");
         }
     });
 }
