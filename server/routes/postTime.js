@@ -60,10 +60,9 @@ router.get('/', function(req, res) {
             console.log(data);
             tweets = data[0];
         }
-        return promise;
     });
     console.log(tweets);
-    .done(function(tweets) {
+    promise.done(function(tweets) {
         res.json(tweets);
     });
 });
