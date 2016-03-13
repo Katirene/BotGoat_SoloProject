@@ -52,14 +52,14 @@ router.put('/', function(req, res) {
 
 
 router.get('/', function(req, res) {
-    T.get('/statuses/user_timeline', params, gotData)
+    T.get('/statuses/user_timeline', params, function() {
+        console.log(data);
+        var tweets = data.statuses;
+        res.send(tweets);
+    });
 });
 
-function gotData(err, data, response) {
-    console.log(data);
-    var tweets = data.statuses;
-    res.send(tweets);
-}
+
 
 
 
