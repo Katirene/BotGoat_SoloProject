@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a248c5d7-d602-40fe-b7a2-f1085c0ac00c" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/views/templates/dashboard.html" afterPath="$PROJECT_DIR$/public/views/templates/dashboard.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/server/routes/postTime.js" afterPath="$PROJECT_DIR$/server/routes/postTime.js" />
     </list>
     <ignored path="mkproj_solo.iws" />
@@ -58,8 +57,8 @@
       <file leaf-file-name="postTime.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/server/routes/postTime.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.48016417">
-              <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+            <state vertical-scroll-proportion="0.40218878">
+              <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -896,8 +895,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/server/routes/postTime.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.48016417">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
+        <state vertical-scroll-proportion="0.40218878">
+          <caret line="28" column="2" selection-start-line="28" selection-start-column="2" selection-end-line="28" selection-end-column="2" />
           <folding />
         </state>
       </provider>

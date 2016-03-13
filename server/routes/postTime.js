@@ -24,7 +24,7 @@ var job = {
 };
 
 var params = {
-    q: 'exclude_replies',
+    screen_name: 'botgoatbasics',
     count: 1
 };
 
@@ -52,7 +52,7 @@ router.put('/', function(req, res) {
 
 
 router.get('/', function(req, res) {
-    T.get('/statuses/home_timeline', params, gotData)
+    T.get('/statuses/user_timeline', params, gotData)
 });
 
 function gotData(err, data, response) {
