@@ -25,9 +25,9 @@ myApp.controller('DashboardController', function ($scope, $http) {
 
     $scope.pause = function() {
         if (pause == false) {
-            pause = {pause: "true"};
+            pause = {pause: true};
         } else {
-            pause = {pause: "false"};
+            pause = {pause: false};
         }
         pauseBot(pause);
     };
