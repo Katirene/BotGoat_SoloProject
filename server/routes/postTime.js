@@ -23,6 +23,11 @@ var job = {
     runOnInit: false
 };
 
+var params = {
+    q: 'exclude_replies',
+    count: 1
+};
+
 var cronData = '';
 var currentCron = null;
 var counter = 0;
@@ -44,6 +49,15 @@ router.put('/', function(req, res) {
     }
 
 });
+
+
+router.get('/', function(req, res) {
+    T.get('/statuses/home_timeline', params, gotData)
+});
+
+function gotData(err, data, response) {
+    console.log(data)
+}
 
 
 
