@@ -78,7 +78,7 @@ router.get('/', function(req, res) {
                 }
             });
     }
-    res.json(tweets);
+    res.send(tweets);
 });
 
 
