@@ -76,10 +76,9 @@ router.get('/', function(req, res) {
                 } else {
                     console.log("Tweet got")
                 }
-            };
-
+            });
+    }
     res.json(tweets);
-    });
 });
 
 
