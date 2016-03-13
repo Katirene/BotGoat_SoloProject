@@ -53,8 +53,8 @@ myApp.controller('DashboardController', function ($scope, $http) {
 
     function getLatestTweet() {
         $http.get('/postTime').then(function(response) {
-           console.log(response.data);
-            $scope.latestTweet = response.data;
+           console.log(response);
+            $scope.latestTweet = response;
 
         });
     }
