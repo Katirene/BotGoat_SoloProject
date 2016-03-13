@@ -4,6 +4,7 @@ var router = express.Router();
 var bodyParser = require('body-parser');
 var Twit = require('twit');
 var CronJob = require('cron').CronJob;
+var async = require('async');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
@@ -51,9 +52,10 @@ router.put('/', function(req, res) {
 });
 
 
-router.get('/', function(req, res) {
-    var tweets = null;
-    var promise = T.get('/statuses/user_timeline', params).then(function(err, data, response) {
+var tweets = null;
+
+function getTweet() {
+    T.get('/statuses/user_timeline', params).then(function (err, data, response) {
         if (err) {
             console.log("error getting latest tweet");
         } else {
@@ -61,11 +63,25 @@ router.get('/', function(req, res) {
             tweets = data[0];
         }
     });
-    console.log(tweets);
-    promise.done(function(tweets) {
-        res.json(tweets);
+}
+
+router.get('/', function(req, res) {
+    function run() {
+        async.waterfall([
+                getTweet
+            ],
+            function(err, data) {
+                if (err) {
+                    console.log("error in geting data")
+                } else {
+                    console.log("Tweet got")
+                }
+            };
+
+    res.json(tweets);
     });
 });
+
 
 
 
