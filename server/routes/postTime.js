@@ -75,7 +75,7 @@ router.get('/', function(req, res) {
         async.waterfall([
                 getTweet
             ],
-            function(err, data) {
+            function(err, botData) {
                 if (err) {
                     console.log("error in geting data")
                 } else {
