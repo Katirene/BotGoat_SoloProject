@@ -27,34 +27,33 @@ myApp.controller('DashboardController', function ($scope, $http) {
     };
 
     $scope.pause = function() {
-        if (pause == false) {
-            pause = {pause: true};
-        } else {
-            pause = {pause: false};
-        }
+        pause ^= true;
+
         pauseBot(pause);
     };
 
     //hourTweet is the object that has 2 properties. hour: sets the interval of time, hourTweet sets the status.
     function postTime(hourTweet) {
-        $http.post('/postTime', hourTweet).then(function() {
-            console.log('Tweet with time interval has been send to Server')
+        $http.post('/postTime', hourTweet).then(function(response) {
+            console.log('Tweet with time interval has been send to Server');
+            console.log(response.config.data.hourTweet);
+            $scope.latestTweet = response.config.data.hourTweet;
+            console.log($scope.latestTweet);
         });
     }
 
+    function pauseBot(shouldPause) {
+        console.log('PauseBot(): pause=' + shouldPause);
 
- //need to build out a function for pause//
-
-    function pauseBot(pause) {
-        $http.put('/postTime', pause).then(function() {
+        $http.put('/postTime', {pause: shouldPause}).then(function() {
             console.log('Pause info sent to server')
         });
     }
 
     function getLatestTweet() {
         $http.get('/postTime').then(function(response) {
-           console.log(response.data);
-            $scope.latestTweet = response.data;
+           console.log(response);
+            $scope.latestTweet = response.data.baseTweet;
 
         });
     }
