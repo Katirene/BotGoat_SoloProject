@@ -52,7 +52,7 @@ router.put('/', function(req, res) {
 });
 
 
-var tweets = null;
+var tweets = [];
 
 function getTweet() {
     T.get('/statuses/user_timeline', params).then(function (err, data, response) {
@@ -78,7 +78,8 @@ router.get('/', function(req, res) {
                 }
             });
     }
-    res.send(tweets);
+    console.log(tweets[0].status.text);
+    res.send(tweets[0].status.text);
 });
 
 
