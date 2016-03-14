@@ -1,1 +1,20 @@
 Step 1
+<Div ng-controller="StepOneController">
+    <div class="container">
+        <h1>Configure your Bot</h1>
+        <div class="radio">
+            <label for="redRadio">On a Schedule:     </label><br />
+            <input id="redRadio" type="radio" ng-model="colorValue" value="schedule" /><br />
+
+            <label for="greenRadio">In response to a specific text:    </label><br />
+            <input id="greenRadio" type="radio" ng-model="colorValue" value="word" /><br />
+
+            <label for="blueRadio">When you are @ mentioned:    </label><br />
+            <input id="blueRadio" type="radio" ng-model="colorValue" value="mention" /><br />
+            <br />
+            <strong>Selected Tweet Mode:</strong> {{colorValue}}<br />
+        </div>
+    </div>
+
+</div>
+

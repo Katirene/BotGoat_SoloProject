@@ -1,6 +1,6 @@
 myApp.controller('ModalController', function ($scope, $uibModal, $log) {
 
-	console.log('inside Modal Controller')
+	console.log('inside Modal Controller');
 
   $scope.open = function () {
 
@@ -21,7 +21,7 @@ myApp.controller('ModalController', function ($scope, $uibModal, $log) {
 myApp.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
 
   $scope.step = 1;
-  $scope.finalStep = 4;
+  $scope.finalStep = 3;
 
   $scope.next = function () {
   	if($scope.step < $scope.finalStep)
