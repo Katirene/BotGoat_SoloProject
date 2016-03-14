@@ -1,0 +1,25 @@
+<div class="modal-header">
+    <h3 class="modal-title">Im a modal!</h3>
+</div>
+
+<div class="modal-body" ng-switch="step">
+    <div ng-switch-when="1">
+        <ng-include src="'./templates/modalStep1.html'"></ng-include>
+    </div>
+    <div ng-switch-when="2">
+        <ng-include src="'./templates/modalStep2.html'"></ng-include>
+    </div>
+    <div ng-switch-when="3">
+        <ng-include src="'./templates/modalStep3.html'"></ng-include>
+    </div>
+</div>
+
+<div class="modal-footer">
+    <button class="btn btn-link" type="button" ng-click="cancel()">Cancel</button>
+
+    <button class="btn btn-primary" ng-show="step>1" type="button" ng-click="back()">Back</button>
+
+    <button class="btn btn-primary" ng-show="step<finalStep" type="button" ng-click="next()">Next</button>
+
+    <button class="btn btn-success" ng-show="step==finalStep" type="button" ng-click="next()">Create</button>
+</div>
