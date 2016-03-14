@@ -21,7 +21,7 @@ myApp.controller('ModalController', function ($scope, $uibModal, $log) {
 myApp.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
 
   $scope.step = 1;
-  $scope.finalStep = 3;
+  $scope.finalStep = 2;
 
   $scope.next = function () {
   	if($scope.step < $scope.finalStep)
