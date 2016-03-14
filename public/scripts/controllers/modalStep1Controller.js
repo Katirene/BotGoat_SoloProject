@@ -1,6 +1,16 @@
 myApp.controller('StepOneController', function ($scope) {
 
-    $scope.colorValue= '';
+    $scope.tweetMode = null;
 
+    $scope.myCronOutput = '';
 
+    $scope.myConfig = {
+        options: {
+            allowMinute: true,
+            allowDay: true,
+            allowWeek : true,
+            allowMonth : true,
+            allowYear : false
+        }
+    };
 });
