@@ -17,15 +17,10 @@
     <script type="text/javascript" src="../scripts/controllers/configBotController.js"></script>
     <script type="text/javascript" src="../scripts/controllers/homeController.js"></script>
     <script type="text/javascript" src="../scripts/controllers/modalController.js"></script>
-    <!--<script src="view2/view2.js"></script>-->
-    <!--<script src="components/version/version.js"></script>-->
-    <!--<script src="components/version/version-directive.js"></script>-->
-    <!--<script src="components/version/interpolate-filter.js"></script>-->
-    <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css">-->
-    <!--<link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css">-->
-    <!--<link rel="stylesheet" href="../vendors/bootstrap.min.css">-->
+    <script type="text/javascript" src="../scripts/controllers/modalStep1Controller.js"></script>
+    <script type="text/javascript" src="../scripts/controllers/modalStep2Controller.js"></script>
+    <script type="text/javascript" src="../scripts/controllers/modalStep3Controller.js"></script>
     <link rel="stylesheet" href="../styles/stylesheet.css">
-    <!--<script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>-->
 </head>
 
 
@@ -53,6 +48,7 @@
     </form>
 </div>
 
+<button ng-click="pause()"class="btn btn-danger">Pause Bot</button>
 
 <div ng-view></div>
 
