@@ -1,10 +1,13 @@
 <div ng-controller="StepTwoController">STEP 2
-    <!--<div class="schedule">-->
-        <!--<h1>Tweet Every: </h1>-->
+    <div class="tweetContent">
+        <form>
+            <p>
+                <label for="tweetStatus">What Do You Want To Say?</label>
+                <input type="text" ng-model="tweetStatus" value="tweetStatus" />
+            </p>
+            <p>{{tweetStatus}}</p>
 
-        <!--<cron-selection output="myCronOutput"></cron-selection>-->
-
-        <!--{{myCronOutput}}-->
-
-    <!--</div>-->
-<!--</div>-->
+        </form>
+    </div>
+    <div ng-show="tweetStatus != null"><button ng-click="tweet()">Tweet it Yo!</button></div>
+</div>
