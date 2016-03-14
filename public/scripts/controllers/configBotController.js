@@ -1,14 +1,12 @@
-myApp.controller('DashboardController', function ($scope, $http) {
+myApp.controller('BotConfigController', function ($scope, $http) {
 
-    getLatestTweet();
 
-    console.log('In Dashboard Controller');
+    console.log('In BotConfigController');
 
     var pause = false;
 
     $scope.hourTweet = '';
     $scope.myCronOutput = '';
-    $scope.latestTweet = 'Your Bots Latest Tweet';
 
     $scope.myConfig = {
         options: {
@@ -50,12 +48,5 @@ myApp.controller('DashboardController', function ($scope, $http) {
         });
     }
 
-    function getLatestTweet() {
-        $http.get('/postTime').then(function(response) {
-           console.log(response);
-            $scope.latestTweet = response.data.baseTweet;
-
-        });
-    }
 
 });

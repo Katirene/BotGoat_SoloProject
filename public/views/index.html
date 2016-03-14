@@ -12,8 +12,11 @@
     <script type="text/javascript" src="../vendors/angular-animate.min.js"></script>
     <script type="text/javascript" src="../vendors/angular-bootstrap.min.js"></script>
     <script type="text/javascript" src="../vendors/angular-cron-jobs.min.js"></script>
+    <script type="text/javascript" src="../vendors/ui-bootstrap-tpls-1.2.4.js"></script>
     <script type="text/javascript" src="../scripts/clientapp.js"></script>
-    <script type="text/javascript" src="../scripts/controllers/dashboardController.js"></script>
+    <script type="text/javascript" src="../scripts/controllers/configBotController.js"></script>
+    <script type="text/javascript" src="../scripts/controllers/homeController.js"></script>
+    <script type="text/javascript" src="../scripts/controllers/modalController.js"></script>
     <!--<script src="view2/view2.js"></script>-->
     <!--<script src="components/version/version.js"></script>-->
     <!--<script src="components/version/version-directive.js"></script>-->
@@ -28,20 +31,33 @@
 
 
 <body ng-app="myApp">
+    <div ng-controller='HomeController'>
 
 <div ng-include="'./templates/header.html'"></div>
 
 <ul class="menu">
-    <li><a href="#/login">Make A Bot</a></li>
-    <li><a href="#/reviewbot">Review your Bot</a></li>
-    <li><a href="#/login">Log In</a></li>
-    <li><a href="#/dashboard">Temp Link to Dashboard</a></li>
+    <li><a href="#login">Make A Bot</a></li>
+    <li><a href="#login">Log In</a></li>
+    <li><a href="#configBot">Configure Bot</a></li>
 </ul>
+
+
+<button ng-controller="ModalController" type="button" class="btn btn-default" ng-click="open()">Open me!</button>
+
+<div class="container">
+    <form>
+        <p>
+            <label type="text" value='latestTweet'>Latest Tweet: </label>
+            <span>{{latestTweet}}</span>
+        </p>
+    </form>
+</div>
 
 
 <div ng-view></div>
 
 <div>Solo Starter: Boat Goat<span app-version></span></div>
+</div>
 
 
 </body>
