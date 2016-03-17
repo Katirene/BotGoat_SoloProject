@@ -138,7 +138,7 @@ router.post('/word', function(req, res) {
         });
 
     });
-    res.sendStatus(200).end
+    res.sendStatus(200).end();
 });
 
 
