@@ -16,10 +16,12 @@ app.use('/postTime', postTime);
 
 
 app.use(express.static('public'));
+app.use(express.static('public/images'));
 app.use(express.static('public/views'));
 app.use(express.static('public/scripts'));
 app.use(express.static('public/styles'));
 app.use(express.static('public/vendors'));
+
 
 app.set('port', process.env.PORT || 5000);
 
