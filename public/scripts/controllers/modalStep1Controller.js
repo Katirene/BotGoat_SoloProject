@@ -4,7 +4,7 @@ myApp.controller('StepOneController', ['$scope', 'DataFactory', function($scope,
 
     $scope.dataFactory = DataFactory;
 
-    $scope.tweetMode = 'mention';
+    $scope.tweetMode = '';
 
     $scope.myCronOutput = '';
 

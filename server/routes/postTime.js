@@ -114,6 +114,8 @@ router.post('/schedule', function(req, res) {
 
 });
 
+
+//route that handles posting to twitter in response to a specific word search
 router.post('/word', function(req, res) {
 
         var statusText = req.body.tweetStatus;
@@ -136,42 +138,37 @@ router.post('/word', function(req, res) {
         });
 
     });
-
-
-
-
-// filter the public stream by english tweets containing `#apple`
-
-    //var stream = T.stream('statuses/filter', { user_update: 'tweetSearch', language: 'en' });
-    //
-    //stream.on('tweet', function (tweetEvent) {
-    //    console.log(tweet);
-    //    console.log(tweetEvent);
-    //});
-
-
-
-    //stream.on('disconnect', function (disconnectMessage) {
-    //    console.log('this is a disconnectedMessage:', disconnectMessage);
-    ////});
-    //
-    //stream.on('warning', function (warning) {
-    //    console.log('this is a warning from Twitter:', warning);
-    //});
-
-
     res.sendStatus(200).end
 });
 
-router.post('/mention', function(req, res) {
 
+
+//route that handles tweeting when the bot is at mentioned.
+router.post('/mention', function(req, res) {
+    console.log('inside mention route');
 
     var statusText = req.body.tweetStatus;
-    function twitterPost() {
-        var tweet = {status: ''};
-        tweet.status = statusText + counter++;
-        //T.post('statuses/update', tweet, tweeted);
-    }
+
+    var stream = T.stream('statuses/filter', {track: '@BotGoatBasics'});
+
+
+    stream.on('tweet', function (tweetEvent) {
+
+        var reply_to = tweetEvent.in_reply_to_screen_name;
+        // Check to see if this was, in fact, a reply to you
+        if (reply_to === 'BotGoatBasics') {
+            // Get the username and content of the tweet
+            var name = tweetEvent.user.screen_name;
+            var txt = tweetEvent.text;
+            var reply = '@'+ name + ' ' + statusText;
+            var tweetId = tweetEvent.id_str;
+            console.log(reply);
+            return T.post('statuses/update', {status: reply, in_reply_to_status_id: tweetId}, tweeted);
+        }
+        //return T.post('statuses/update', {status: reply}, tweeted);
+
+    });
+
     res.status(200).end();
 
 });
@@ -182,7 +179,7 @@ function tweeted(err, data, response) {
     if (data) {
         console.log("Data:", data);
     } else if (err) {
-        console.log("Err:", err);
+        console.log('Tweeted: ' + reply);
     }
 }
 

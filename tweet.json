@@ -1,50 +1,52 @@
+//JSON dump from an At mention
+
 {
-  "created_at": "Tue Mar 15 18:59:51 +0000 2016",
-  "id": 709816399019921400,
-  "id_str": "709816399019921409",
-  "text": "RT @Marlonmdna: The Queen 😻💘👑 #madonna #queenofpop #rebelhearttour https://t.co/n3kPFHFrk8",
-  "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
+  "created_at": "Thu Mar 17 16:12:01 +0000 2016",
+  "id": 710498937925271600,
+  "id_str": "710498937925271552",
+  "text": "@BotGoatBasics cooperate please",
+  "source": "<a href=\"http://twitter.com\" rel=\"nofollow\">Twitter Web Client</a>",
   "truncated": false,
   "in_reply_to_status_id": null,
   "in_reply_to_status_id_str": null,
-  "in_reply_to_user_id": null,
-  "in_reply_to_user_id_str": null,
-  "in_reply_to_screen_name": null,
+  "in_reply_to_user_id": 706879652892008400,
+  "in_reply_to_user_id_str": "706879652892008449",
+  "in_reply_to_screen_name": "BotGoatBasics",
   "user": {
-    "id": 2788080711,
-    "id_str": "2788080711",
-    "name": "RebelHeart2015",
-    "screen_name": "RebelHeart2015",
-    "location": "Chicago",
+    "id": 700364678,
+    "id_str": "700364678",
+    "name": "K Traxler",
+    "screen_name": "katireneMpls",
+    "location": null,
     "url": null,
-    "description": null,
+    "description": "Friends are awesome, boys suck and music gets me out of bed in the morning.",
     "protected": false,
     "verified": false,
-    "followers_count": 2757,
-    "friends_count": 2549,
-    "listed_count": 27,
-    "favourites_count": 33392,
-    "statuses_count": 32843,
-    "created_at": "Sat Sep 27 22:30:16 +0000 2014",
+    "followers_count": 79,
+    "friends_count": 349,
+    "listed_count": 1,
+    "favourites_count": 103,
+    "statuses_count": 813,
+    "created_at": "Tue Jul 17 04:35:39 +0000 2012",
     "utc_offset": null,
     "time_zone": null,
-    "geo_enabled": true,
+    "geo_enabled": false,
     "lang": "en",
     "contributors_enabled": false,
     "is_translator": false,
     "profile_background_color": "C0DEED",
-    "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-    "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
+    "profile_background_image_url": "http://pbs.twimg.com/profile_background_images/738622405/1921ca66642e425bd62453ff11f2acd1.jpeg",
+    "profile_background_image_url_https": "https://pbs.twimg.com/profile_background_images/738622405/1921ca66642e425bd62453ff11f2acd1.jpeg",
     "profile_background_tile": false,
     "profile_link_color": "0084B4",
-    "profile_sidebar_border_color": "C0DEED",
+    "profile_sidebar_border_color": "000000",
     "profile_sidebar_fill_color": "DDEEF6",
     "profile_text_color": "333333",
     "profile_use_background_image": true,
-    "profile_image_url": "http://pbs.twimg.com/profile_images/655182268198051840/yIq61pxK_normal.jpg",
-    "profile_image_url_https": "https://pbs.twimg.com/profile_images/655182268198051840/yIq61pxK_normal.jpg",
-    "profile_banner_url": "https://pbs.twimg.com/profile_banners/2788080711/1445512274",
-    "default_profile": true,
+    "profile_image_url": "http://pbs.twimg.com/profile_images/2406052328/f6dzge0ak9vowuhodhqj_normal.jpeg",
+    "profile_image_url_https": "https://pbs.twimg.com/profile_images/2406052328/f6dzge0ak9vowuhodhqj_normal.jpeg",
+    "profile_banner_url": "https://pbs.twimg.com/profile_banners/700364678/1355546820",
+    "default_profile": false,
     "default_profile_image": false,
     "following": null,
     "follow_request_sent": null,
@@ -54,310 +56,29 @@
   "coordinates": null,
   "place": null,
   "contributors": null,
-  "retweeted_status":
-  {
-    "created_at": "Tue Mar 15 16:40:29 +0000 2016",
-    "id": 709781325260185600,
-    "id_str": "709781325260185602",
-    "text": "The Queen 😻💘👑 #madonna #queenofpop #rebelhearttour https://t.co/n3kPFHFrk8",
-    "source": "<a href=\"http://twitter.com/download/android\" rel=\"nofollow\">Twitter for Android</a>",
-    "truncated": false,
-    "in_reply_to_status_id": null,
-    "in_reply_to_status_id_str": null,
-    "in_reply_to_user_id": null,
-    "in_reply_to_user_id_str": null,
-    "in_reply_to_screen_name": null,
-    "user": {
-      "id": 2945321039,
-      "id_str": "2945321039",
-      "name": "Marlonmdna ®",
-      "screen_name": "Marlonmdna",
-      "location": null,
-      "url": "https://instagram.com/marlonmdna/",
-      "description": "follow back Rebel hearts",
-      "protected": false,
-      "verified": false,
-      "followers_count": 2409,
-      "friends_count": 5000,
-      "listed_count": 12,
-      "favourites_count": 3467,
-      "statuses_count": 1658,
-      "created_at": "Sun Dec 28 04:55:09 +0000 2014",
-      "utc_offset": -18000,
-      "time_zone": "Bogota",
-      "geo_enabled": false,
-      "lang": "es",
-      "contributors_enabled": false,
-      "is_translator": false,
-      "profile_background_color": "C0DEED",
-      "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
-      "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-      "profile_background_tile": false,
-      "profile_link_color": "0084B4",
-      "profile_sidebar_border_color": "C0DEED",
-      "profile_sidebar_fill_color": "DDEEF6",
-      "profile_text_color": "333333",
-      "profile_use_background_image": true,
-      "profile_image_url": "http://pbs.twimg.com/profile_images/707726876677152769/G4jqvoRX_normal.jpg",
-      "profile_image_url_https": "https://pbs.twimg.com/profile_images/707726876677152769/G4jqvoRX_normal.jpg",
-      "profile_banner_url": "https://pbs.twimg.com/profile_banners/2945321039/1451415999",
-      "default_profile": true,
-      "default_profile_image": false,
-      "following": null,
-      "follow_request_sent": null,
-      "notifications": null
-    },
-    "geo": null,
-    "coordinates": null,
-    "place": null,
-    "contributors": null,
-    "is_quote_status": false,
-    "retweet_count": 9,
-    "favorite_count": 17,
-    "entities": {
-      "hashtags": [
-        {
-          "text": "madonna",
-          "indices": [
-            14,
-            22
-          ]
-        },
-        {
-          "text": "queenofpop",
-          "indices": [
-            23,
-            34
-          ]
-        },
-        {
-          "text": "rebelhearttour",
-          "indices": [
-            35,
-            50
-          ]
-        }
-      ],
-      "urls": [],
-      "user_mentions": [],
-      "symbols": [],
-      "media": [
-        {
-          "id": 709781313453219800,
-          "id_str": "709781313453219840",
-          "indices": [
-            51,
-            74
-          ],
-          "media_url": "http://pbs.twimg.com/media/CdmmWBCW4AAFz2E.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/CdmmWBCW4AAFz2E.jpg",
-          "url": "https://t.co/n3kPFHFrk8",
-          "display_url": "pic.twitter.com/n3kPFHFrk8",
-          "expanded_url": "http://twitter.com/Marlonmdna/status/709781325260185602/photo/1",
-          "type": "photo",
-          "sizes": {
-            "medium": {
-              "w": 480,
-              "h": 600,
-              "resize": "fit"
-            },
-            "large": {
-              "w": 480,
-              "h": 600,
-              "resize": "fit"
-            },
-            "thumb": {
-              "w": 150,
-              "h": 150,
-              "resize": "crop"
-            },
-            "small": {
-              "w": 340,
-              "h": 425,
-              "resize": "fit"
-            }
-          }
-        }
-      ]
-    },
-    "extended_entities": {
-      "media": [
-        {
-          "id": 709781313453219800,
-          "id_str": "709781313453219840",
-          "indices": [
-            51,
-            74
-          ],
-          "media_url": "http://pbs.twimg.com/media/CdmmWBCW4AAFz2E.jpg",
-          "media_url_https": "https://pbs.twimg.com/media/CdmmWBCW4AAFz2E.jpg",
-          "url": "https://t.co/n3kPFHFrk8",
-          "display_url": "pic.twitter.com/n3kPFHFrk8",
-          "expanded_url": "http://twitter.com/Marlonmdna/status/709781325260185602/photo/1",
-          "type": "photo",
-          "sizes": {
-            "medium": {
-              "w": 480,
-              "h": 600,
-              "resize": "fit"
-            },
-            "large": {
-              "w": 480,
-              "h": 600,
-              "resize": "fit"
-            },
-            "thumb": {
-              "w": 150,
-              "h": 150,
-              "resize": "crop"
-            },
-            "small": {
-              "w": 340,
-              "h": 425,
-              "resize": "fit"
-            }
-          }
-        }
-      ]
-    },
-    "favorited": false,
-    "retweeted": false,
-    "possibly_sensitive": false,
-    "filter_level": "low",
-    "lang": "en"
-  },
   "is_quote_status": false,
   "retweet_count": 0,
   "favorite_count": 0,
   "entities": {
-    "hashtags": [
-      {
-        "text": "madonna",
-        "indices": [
-          30,
-          38
-        ]
-      },
-      {
-        "text": "queenofpop",
-        "indices": [
-          39,
-          50
-        ]
-      },
-      {
-        "text": "rebelhearttour",
-        "indices": [
-          51,
-          66
-        ]
-      }
-    ],
+    "hashtags": [],
     "urls": [],
     "user_mentions": [
       {
-        "screen_name": "Marlonmdna",
-        "name": "Marlonmdna ®",
-        "id": 2945321039,
-        "id_str": "2945321039",
+        "screen_name": "BotGoatBasics",
+        "name": "BotGoat",
+        "id": 706879652892008400,
+        "id_str": "706879652892008449",
         "indices": [
-          3,
+          0,
           14
         ]
       }
     ],
-    "symbols": [],
-    "media": [
-      {
-        "id": 709781313453219800,
-        "id_str": "709781313453219840",
-        "indices": [
-          67,
-          90
-        ],
-        "media_url": "http://pbs.twimg.com/media/CdmmWBCW4AAFz2E.jpg",
-        "media_url_https": "https://pbs.twimg.com/media/CdmmWBCW4AAFz2E.jpg",
-        "url": "https://t.co/n3kPFHFrk8",
-        "display_url": "pic.twitter.com/n3kPFHFrk8",
-        "expanded_url": "http://twitter.com/Marlonmdna/status/709781325260185602/photo/1",
-        "type": "photo",
-        "sizes": {
-          "medium": {
-            "w": 480,
-            "h": 600,
-            "resize": "fit"
-          },
-          "large": {
-            "w": 480,
-            "h": 600,
-            "resize": "fit"
-          },
-          "thumb": {
-            "w": 150,
-            "h": 150,
-            "resize": "crop"
-          },
-          "small": {
-            "w": 340,
-            "h": 425,
-            "resize": "fit"
-          }
-        },
-        "source_status_id": 709781325260185600,
-        "source_status_id_str": "709781325260185602",
-        "source_user_id": 2945321039,
-        "source_user_id_str": "2945321039"
-      }
-    ]
-  },
-  "extended_entities": {
-    "media": [
-      {
-        "id": 709781313453219800,
-        "id_str": "709781313453219840",
-        "indices": [
-          67,
-          90
-        ],
-        "media_url": "http://pbs.twimg.com/media/CdmmWBCW4AAFz2E.jpg",
-        "media_url_https": "https://pbs.twimg.com/media/CdmmWBCW4AAFz2E.jpg",
-        "url": "https://t.co/n3kPFHFrk8",
-        "display_url": "pic.twitter.com/n3kPFHFrk8",
-        "expanded_url": "http://twitter.com/Marlonmdna/status/709781325260185602/photo/1",
-        "type": "photo",
-        "sizes": {
-          "medium": {
-            "w": 480,
-            "h": 600,
-            "resize": "fit"
-          },
-          "large": {
-            "w": 480,
-            "h": 600,
-            "resize": "fit"
-          },
-          "thumb": {
-            "w": 150,
-            "h": 150,
-            "resize": "crop"
-          },
-          "small": {
-            "w": 340,
-            "h": 425,
-            "resize": "fit"
-          }
-        },
-        "source_status_id": 709781325260185600,
-        "source_status_id_str": "709781325260185602",
-        "source_user_id": 2945321039,
-        "source_user_id_str": "2945321039"
-      }
-    ]
+    "symbols": []
   },
   "favorited": false,
   "retweeted": false,
-  "possibly_sensitive": false,
   "filter_level": "low",
   "lang": "en",
-  "timestamp_ms": "1458068391934"
+  "timestamp_ms": "1458231121890"
 }
