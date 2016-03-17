@@ -169,7 +169,7 @@ router.post('/mention', function(req, res) {
 
     });
 
-    res.status(200).end();
+    res.sendStatus(200).end();
 
 });
 
