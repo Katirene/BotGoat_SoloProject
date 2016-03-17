@@ -16,13 +16,13 @@ var T = new Twit({
     access_token_secret:  process.env.accessTokenSecret
 });
 
-var job = {
-    cronTime: cronData,
-    onTick: function(){},
-    start: true,
-    timeZone: "America/Los_Angeles",
-    runOnInit: false
-};
+//var job = {
+//    cronTime: cronData,
+//    onTick: function(){},
+//    start: true,
+//    timeZone: "America/Los_Angeles",
+//    runOnInit: false
+//};
 
 var params = {
     screen_name: 'botgoatbasics',
@@ -32,10 +32,10 @@ var params = {
 var cronData = '';
 var currentCron = null;
 var counter = 0;
+var tweetMode = '';
 
 
 
-//need to finish this post end point that accepts the true and false on req.body.pause
 //toggle the currentCron to stop on true.
 
 router.put('/', function(req, res) {
@@ -85,29 +85,97 @@ router.get('/', function(req, res) {
 });
 
 
-//Post without using workers and clocks
+//Post a tweet on a schedule.
+router.post('/schedule', function(req, res) {
 
-router.post('/', function(req, res) {
-    console.log(req.body);
+        cronData = req.body.cronData;
 
-    cronData = req.body.cronData;
+        var statusText = req.body.tweetStatus;
 
-    var statusText = req.body.hourTweet;
+        var job = {
+            cronTime: cronData,
+            onTick: twitterPost,
+            start: true,
+            timeZone: "America/Los_Angeles",
+            runOnInit: false
+        };
 
-    job.cronTime = cronData;
-    job.onTick = twitterPost;
+        currentCron = new CronJob(job);
 
-    currentCron = new CronJob(job);
+        console.log('this is my CronJob with new data:', currentCron);
 
-    console.log(CronJob);
+        function twitterPost() {
+            console.log('inside twitterPost');
+            var tweet = {status: ''};
+            tweet.status = statusText + counter++;
+            T.post('statuses/update', tweet, tweeted);
+        }
+        res.status(200).end();
 
+});
+
+router.post('/word', function(req, res) {
+
+        var statusText = req.body.tweetStatus;
+        var tweetSearch = req.body.tweetSearch;
+
+    console.log('inside the post/word route');
+
+    var stream = T.stream('statuses/filter', {track: '#' + tweetSearch, language: 'en' });
+
+    stream.on('tweet', function (eventMsg) {
+        console.log(eventMsg);
+        var msg = eventMsg.user.text;
+        console.log(eventMsg.user);
+        var screenName = eventMsg.user.screen_name;
+        var msgID = eventMsg.user.id_str;
+        console.log(msgID);
+        var replyText = '@' + screenName + ' ' + statusText;
+        return T.post('statuses/update', {in_reply_to_status_id: msgID, status: replyText}, function () {
+            console.log('I tweeted the message');
+        });
+
+    });
+
+
+
+
+// filter the public stream by english tweets containing `#apple`
+
+    //var stream = T.stream('statuses/filter', { user_update: 'tweetSearch', language: 'en' });
+    //
+    //stream.on('tweet', function (tweetEvent) {
+    //    console.log(tweet);
+    //    console.log(tweetEvent);
+    //});
+
+
+
+    //stream.on('disconnect', function (disconnectMessage) {
+    //    console.log('this is a disconnectedMessage:', disconnectMessage);
+    ////});
+    //
+    //stream.on('warning', function (warning) {
+    //    console.log('this is a warning from Twitter:', warning);
+    //});
+
+
+    res.sendStatus(200).end
+});
+
+router.post('/mention', function(req, res) {
+
+
+    var statusText = req.body.tweetStatus;
     function twitterPost() {
-        var tweet = { status: ''};
+        var tweet = {status: ''};
         tweet.status = statusText + counter++;
-        T.post('statuses/update', tweet, tweeted);
+        //T.post('statuses/update', tweet, tweeted);
     }
     res.status(200).end();
+
 });
+
 
 
 function tweeted(err, data, response) {

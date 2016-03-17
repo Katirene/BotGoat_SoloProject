@@ -18,7 +18,11 @@ myApp.controller('ModalController', function ($scope, $uibModal, $log) {
   };
 });
 
-myApp.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
+myApp.controller('ModalInstanceCtrl', ['$scope', '$uibModalInstance', 'DataFactory', function ($scope, $uibModalInstance, DataFactory) {
+
+  $scope.dataFactory = DataFactory;
+
+  //$scope.deploy = deploy;
 
   $scope.step = 1;
   $scope.finalStep = 2;
@@ -37,4 +41,9 @@ myApp.controller('ModalInstanceCtrl', function ($scope, $uibModalInstance) {
   $scope.cancel = function () {
     $uibModalInstance.dismiss('cancel');
   };
-});
+
+  $scope.deploy = function () {
+    $scope.dataFactory.deployBot();
+  }
+
+}]);
