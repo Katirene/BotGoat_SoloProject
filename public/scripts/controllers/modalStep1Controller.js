@@ -12,6 +12,8 @@ myApp.controller('StepOneController', ['$scope', 'DataFactory', function($scope,
 
     $scope.updateFactoryTweetMode = updateFactoryTweetMode;
 
+    $scope.updateFactoryTweetSearchText = updateFactoryTweetSearchText;
+
     $scope.myConfig = {
         options: {
             allowMinute: true,
@@ -25,6 +27,11 @@ myApp.controller('StepOneController', ['$scope', 'DataFactory', function($scope,
     function updateFactoryTweetMode() {
         console.log($scope.tweetMode);
         $scope.dataFactory.setMode($scope.tweetMode);
+    }
+
+    function updateFactoryTweetSearchText() {
+        console.log($scope.myTweetSearch);
+        $scope.dataFactory.setSearch($scope.myTweetSearch);
     }
 
     $scope.$watch("myCronOutput", function(newValue, oldValue){

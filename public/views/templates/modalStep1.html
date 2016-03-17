@@ -29,7 +29,7 @@ Step 1
     <div ng-show="tweetMode == 'word'">
         <h2>Search for Tweets Containing:</h2>
         <label for="myTweetSearch"></label>
-        <input type="text" id="myTweetSearch" ng-model="myTweetSearch">
+        <input type="text" id="myTweetSearch" ng-model="myTweetSearch" ng-change="updateFactoryTweetSearchText()">
         <strong>Selected Tweet Mode:</strong> {{tweetMode}}<br />
         {{myTweetSearch}}
     </div>
