@@ -1,6 +1,5 @@
 .jumbotron {
-    background: url("/public/img/goat.png") no-repeat center left ;
+    background: url("smallBoris.png"), no-repeat center left ;
     background-size: 150%;
 
-    
 }
