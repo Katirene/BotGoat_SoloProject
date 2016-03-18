@@ -16,13 +16,6 @@ var T = new Twit({
     access_token_secret:  process.env.accessTokenSecret
 });
 
-//var job = {
-//    cronTime: cronData,
-//    onTick: function(){},
-//    start: true,
-//    timeZone: "America/Los_Angeles",
-//    runOnInit: false
-//};
 
 var params = {
     screen_name: 'botgoatbasics',
@@ -33,6 +26,7 @@ var cronData = '';
 var currentCron = null;
 var counter = 0;
 var tweetMode = '';
+var pause;
 
 
 
@@ -41,7 +35,7 @@ var tweetMode = '';
 router.put('/', function(req, res) {
     console.log("pause button:", req.body);
     if (currentCron != null) {
-        var pause = req.body.pause;
+        pause = req.body.pause;
         if (pause == true) {
             currentCron.stop();
         } else {
@@ -54,6 +48,8 @@ router.put('/', function(req, res) {
 
 var botData = null;
 
+
+//currently not using this route GET tweets.  Swapped out the front end with an i frame.
 function getTweet() {
     console.log('getTweet()');
 
@@ -126,17 +122,18 @@ router.post('/word', function(req, res) {
     var stream = T.stream('statuses/filter', {track: '#' + tweetSearch, language: 'en' });
 
     stream.on('tweet', function (eventMsg) {
-        console.log(eventMsg);
-        var msg = eventMsg.user.text;
-        console.log(eventMsg.user);
-        var screenName = eventMsg.user.screen_name;
-        var msgID = eventMsg.user.id_str;
-        console.log(msgID);
-        var replyText = '@' + screenName + ' ' + statusText;
-        return T.post('statuses/update', {in_reply_to_status_id: msgID, status: replyText}, function () {
-            console.log('I tweeted the message');
-        });
-
+        if (pause == true) {
+            console.log(eventMsg);
+            var msg = eventMsg.user.text;
+            console.log(eventMsg.user);
+            var screenName = eventMsg.user.screen_name;
+            var msgID = eventMsg.user.id_str;
+            console.log(msgID);
+            var replyText = '@' + screenName + ' ' + statusText;
+            return T.post('statuses/update', {in_reply_to_status_id: msgID, status: replyText}, function () {
+                console.log('I tweeted the message');
+            });
+        }
     });
     res.sendStatus(200).end();
 });
@@ -156,7 +153,6 @@ router.post('/mention', function(req, res) {
 
         var reply_to = tweetEvent.in_reply_to_screen_name;
         // Check to see if this was, in fact, a reply to you
-        if (reply_to === 'BotGoatBasics') {
             // Get the username and content of the tweet
             var name = tweetEvent.user.screen_name;
             var txt = tweetEvent.text;
@@ -164,7 +160,6 @@ router.post('/mention', function(req, res) {
             var tweetId = tweetEvent.id_str;
             console.log(reply);
             return T.post('statuses/update', {status: reply, in_reply_to_status_id: tweetId}, tweeted);
-        }
         //return T.post('statuses/update', {status: reply}, tweeted);
 
     });
