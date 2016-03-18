@@ -1,10 +1,7 @@
 myApp.controller('HomeController', function ($scope, $http) {
 
-
-    //commented out to not Ping API on page load for now.
-    //getLatestTweet();
-
-    var pause = false;
+    $scope.buttonText = 'Pause Bot';
+    $scope.isActive = false;
 
     $scope.latestTweet = 'Your Bots Latest Tweet';
 
@@ -17,15 +14,21 @@ myApp.controller('HomeController', function ($scope, $http) {
     }
 
     $scope.pause = function() {
-        pause ^= true;
-
-        pauseBot(pause);
+        $scope.isActive ^= true;
+        pauseBot(!$scope.isActive);
+            if ($scope.buttonText == 'Pause Bot') {
+                $scope.buttonText = 'Resume Bot';
+            } else {
+                $scope.buttonText = 'Pause Bot';
+            }
     };
 
     function pauseBot(shouldPause) {
-        console.log('PauseBot(): pause=' + shouldPause);
+        var pause = shouldPause ? 1 : 0;
 
-        $http.put('/postTime', {pause: shouldPause}).then(function() {
+        console.log('PauseBot(): pause=' + pause);
+
+        $http.put('/postTime', {pause: pause}).then(function() {
             console.log('Pause info sent to server')
         });
     }
