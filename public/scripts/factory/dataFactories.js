@@ -5,6 +5,19 @@ myApp.factory('DataFactory', ['$http', function($http) {
     var myCronOutput = '';
     var myTweetSearch = '';
     var tweetStatus = '';
+    var buttonActive = false;
+
+    function returnButton() {
+        return buttonActive;
+    }
+
+
+    function setButton() {
+        buttonActive ^= true;
+        console.log(buttonActive);
+        return buttonActive;
+        console.log(buttonActive);
+    }
 
     function setMode(mode) {
         tweetMode = mode;
@@ -28,6 +41,7 @@ myApp.factory('DataFactory', ['$http', function($http) {
     }
 
     function deployBot() {
+        buttonActive = false;
         var tweetParams = {
             cronData: myCronOutput,
             tweetSearch: myTweetSearch,
@@ -55,7 +69,9 @@ myApp.factory('DataFactory', ['$http', function($http) {
         setSearch: setSearch,
         setMode: setMode,
         setCron: setCron,
-        deployBot: deployBot
+        deployBot: deployBot,
+        setButton: setButton,
+        buttonActive: returnButton
     }
 
 

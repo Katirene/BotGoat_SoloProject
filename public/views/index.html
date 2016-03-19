@@ -40,7 +40,7 @@
         </div>
         <div class="pause">
 
-            <button ng-click="pause()" ng-class="{'btn btn-danger': !isActive, 'btn btn-success': isActive}">{{buttonText}}</button>
+            <button ng-click="pause()" ng-class="{'btn btn-danger': !buttonDisplay.class, 'btn btn-success': buttonDisplay.class}">{{buttonDisplay.text}}</button>
 
             <!--<button ng-click="pause()"class="btn btn-danger">Pause-Bot</button>-->
         </div>
