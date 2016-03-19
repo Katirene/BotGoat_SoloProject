@@ -83,6 +83,9 @@ router.get('/', function(req, res) {
 
 //Post a tweet on a schedule.
 router.post('/schedule', function(req, res) {
+        //resetting pause to undefined (if not already.)
+        pause;
+        console.log('pause:', pause);
 
         cronData = req.body.cronData;
 
@@ -113,9 +116,12 @@ router.post('/schedule', function(req, res) {
 
 //route that handles posting to twitter in response to a specific word search
 router.post('/word', function(req, res) {
+    //resetting pause to undefined (if not already.)
+    pause;
+    console.log('pause:', pause);
 
-        var statusText = req.body.tweetStatus;
-        var tweetSearch = req.body.tweetSearch;
+    var statusText = req.body.tweetStatus;
+    var tweetSearch = req.body.tweetSearch;
 
     console.log('inside the post/word route');
 
@@ -143,6 +149,9 @@ router.post('/word', function(req, res) {
 //route that handles tweeting when the bot is at mentioned.
 router.post('/mention', function(req, res) {
     console.log('inside mention route');
+    //resetting pause to undefined (if not already.)
+    pause;
+    console.log('pause:', pause);
 
     var statusText = req.body.tweetStatus;
 

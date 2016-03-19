@@ -1,3 +1,7 @@
+.body {
+    overflow: hidden;
+
+}
 
 .jumbotron {
     background: url("boris.png") center center / 400px 400px no-repeat,
@@ -27,3 +31,12 @@
     padding: 1em;
 }
 
+.modal-header {
+    background: url("fence.jpg");
+
+}
+
+.modal-goat {
+    overflow: auto;
+    padding-bottom: -100px;
+}
