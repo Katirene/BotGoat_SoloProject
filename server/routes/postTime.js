@@ -136,7 +136,7 @@ router.post('/word', function(req, res) {
             var msgID = eventMsg.user.id_str;
             console.log(msgID);
             var replyText = '@' + screenName + ' ' + statusText;
-            return T.post('statuses/update', {in_reply_to_status_id: msgID, status: replyText}, function () {
+            return T.post('statuses/update', {status: replyText, in_reply_to_status_id: msgID}, function () {
                 console.log('I tweeted the message');
             });
         }
@@ -150,7 +150,7 @@ router.post('/word', function(req, res) {
 router.post('/mention', function(req, res) {
     console.log('inside mention route');
     //resetting pause to undefined (if not already.)
-    pause;
+    pause = undefined;
     console.log('pause:', pause);
 
     var statusText = req.body.tweetStatus;
