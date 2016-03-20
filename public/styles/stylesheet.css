@@ -35,6 +35,10 @@
     /*margin-right: auto;*/
 }
 
+.floatleft a {
+    display: block;
+}
+
 .floatright {
     float:left;
     width:40%;
