@@ -2,7 +2,7 @@ Step 1
 <div ng-controller="StepOneController">
     <div class="container">
         <h1>Configure your Bot</h1>
-        <div ng-show="tweetMode == ''" class="radio">
+        <div ng-show="tweetMode == '' || tweetMode == 'mention'" class="radio">
             <label for="redRadio">On a Schedule:     </label><br />
             <input id="redRadio" type="radio" ng-model="tweetMode" value="schedule" ng-change="updateFactoryTweetMode()" /><br />
 
@@ -12,7 +12,6 @@ Step 1
             <label for="blueRadio">When you are @ mentioned:    </label><br />
             <input id="blueRadio" type="radio" ng-model="tweetMode" value="mention" ng-change="updateFactoryTweetMode()" /><br />
             <br />
-            <strong>Selected Tweet Mode:</strong> {{tweetMode}}<br />
         </div>
     </div>
 
@@ -21,17 +20,13 @@ Step 1
 
         <cron-selection output="myCronOutput"></cron-selection>
 
-        <strong>Selected Tweet Mode:</strong> {{tweetMode}}<br/>
-        {{myCronOutput}}
-
     </div>
 
     <div ng-show="tweetMode == 'word'">
         <h2>Search for Tweets Containing:</h2>
         <label for="myTweetSearch"></label>
         <input type="text" id="myTweetSearch" ng-model="myTweetSearch" ng-change="updateFactoryTweetSearchText()">
-        <strong>Selected Tweet Mode:</strong> {{tweetMode}}<br />
-        {{myTweetSearch}}
+
     </div>
 
 </div>

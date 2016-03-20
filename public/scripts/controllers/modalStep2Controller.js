@@ -6,6 +6,8 @@ myApp.controller('StepTwoController', ['$scope', 'DataFactory', function($scope,
 
     $scope.tweetStatus = null;
 
+    $scope.tweetLength = 0;
+
     $scope.updateFactoryTweetStatus = updateFactoryTweetStatus;
 
 
@@ -13,6 +15,10 @@ myApp.controller('StepTwoController', ['$scope', 'DataFactory', function($scope,
         console.log($scope.tweetStatus);
         $scope.dataFactory.setStatus($scope.tweetStatus);
     }
+
+    $scope.$watch("tweetStatus", function(newValue, oldValue){
+        $scope.tweetLength = $scope.tweetStatus.length
+    });
 
 
 }]);
