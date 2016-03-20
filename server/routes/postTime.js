@@ -173,17 +173,21 @@ router.post('/mention', function(req, res) {
 
     //grab the text of the tweet.
     var statusText = req.body.tweetStatus;
+    console.log('statusText:', statusText);
 
     //check to make sure the new tweet on mention is different then the previous one.
     if (statusText != oldStatusText) {
         stream = T.stream('statuses/filter', {track: '@BotGoatBasics'});
+        console.log('stream:', stream);
     }
 
     //Update the 'cashed statusText'.  oldStatusText keeps the current tweet. saved globally.
     oldStatusText = statusText;
+    console.log('oldStatusText:', oldStatusText);
 
     //listen for a tweet to mention @BotGoatBasics
     stream.on('tweet', function (tweetEvent) {
+        console.log('tweetEvent inside return from mention:', tweetEvent);
 
         //only using the screen name of the person who mentioned the bot and the tweetId so that this response stays in the same conversation thread.
         var reply_to = tweetEvent.in_reply_to_screen_name;
