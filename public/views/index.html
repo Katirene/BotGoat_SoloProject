@@ -34,23 +34,24 @@
         <a class="twitter-timeline"  href="https://twitter.com/BotGoatBasics" data-chrome="transparent" data-widget-id="710571430405021698" width="300" height="500">Tweets by @BotGoatBasics</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
     </div>
-    <div class="floatright">
-        <div class="configure">
-            <button ng-controller="ModalController" type="button" class="btn btn-default" ng-click="open()">Configure Bot!</button>
-        </div>
-        <div class="pause">
-
-            <button ng-click="pause()" ng-class="{'btn btn-danger': !buttonDisplay.class, 'btn btn-success': buttonDisplay.class}">{{buttonDisplay.text}}</button>
-
-            <!--<button ng-click="pause()"class="btn btn-danger">Pause-Bot</button>-->
-        </div>
+    <div class="col-sm-4 offset-8">
+        <button id="configure" ng-controller="ModalController" type="button" class="btn btn-default btn-block" ng-click="open()">Configure Bot!</button>
+        <h2>
+            <p class="description">Click me to configure or reset the settings of your twitter bot.  You can set the bot to tweet a status at a regular time, in response to a specific hastag or when the bot is @ mentioned!</p>
+        </h2>
+    </div>
+    <div class="col-sm-4 offset-4">
+        <button id="pause" ng-click="pause()" ng-class="{'btn btn-danger btn-block': !buttonDisplay.class, 'btn btn-success btn-block': buttonDisplay.class}">{{buttonDisplay.text}}</button>
+        <h2>
+            <p class="description">Bot out of control?  Need to Pause the Action? Click to Pause or resume the current scheduled tweet</p>
+        </h2>
     </div>
 
     </div>
 </div>
 
 <div class="container">
-    <div class="col-md-4 col-md-offset-4">
+    <div class="col-md-4">
         <a href="https://twitter.com/BotGoatBasics" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @BotGoatBasics</a>
         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
     </div>

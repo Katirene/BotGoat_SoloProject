@@ -44,6 +44,7 @@ myApp.controller('ModalInstanceCtrl', ['$scope', '$uibModalInstance', 'DataFacto
 
   $scope.deploy = function () {
     $scope.dataFactory.deployBot();
+    $uibModalInstance.dismiss('deploy');
   }
 
 }]);

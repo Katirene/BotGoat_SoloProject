@@ -5,8 +5,10 @@
                 <label for="tweetStatus">What Do You Want To Say?</label>
                 <input type="text" ng-model="tweetStatus" value="tweetStatus" ng-change="updateFactoryTweetStatus()" />
             </p>
-            <p>{{tweetStatus}}</p>
-
         </form>
+        <div ng-show="tweetStatus">
+            <p>Character Count: {{tweetLength}}</p>
+            <p>Max 140</p>
+        </div>
     </div>
 </div>
