@@ -1,22 +1,32 @@
-Step 1
+
 <div ng-controller="StepOneController">
-    <div class="container">
-        <h1>Configure your Bot</h1>
-        <div ng-show="tweetMode == '' || tweetMode == 'mention'" class="radio">
-            <label for="redRadio">On a Schedule:     </label><br />
-            <input id="redRadio" type="radio" ng-model="tweetMode" value="schedule" ng-change="updateFactoryTweetMode()" /><br />
 
-            <label for="greenRadio">In response to a specific text:    </label><br />
-            <input id="greenRadio" type="radio" ng-model="tweetMode" value="word" ng-change="updateFactoryTweetMode()" /><br />
+        <h2 ng-show="tweetMode == '' || tweetMode == 'schedule'" >When do you want to Tweet?</h2>
+        <div ng-show="tweetMode == '' || tweetMode == 'mention'" >
+            <div class="radio">
+                <label>
+                <input id="schedule" type="radio" ng-model="tweetMode" value="schedule" ng-change="updateFactoryTweetMode()" />
+                On A Schedule
+                </label>
+            </div>
 
-            <label for="blueRadio">When you are @ mentioned:    </label><br />
-            <input id="blueRadio" type="radio" ng-model="tweetMode" value="mention" ng-change="updateFactoryTweetMode()" /><br />
-            <br />
+            <div class="radio">
+                <label>
+                <input id="word" type="radio" ng-model="tweetMode" value="word" ng-change="updateFactoryTweetMode()" />
+                In response to a specific hashtag
+                </label>
+            </div>
+
+            <div class="radio">
+                <label>
+                <input id="mention" type="radio" ng-model="tweetMode" value="mention" ng-change="updateFactoryTweetMode()" />
+                When you are @ mentioned
+                </label>
+            </div>
         </div>
-    </div>
+
 
     <div ng-show="tweetMode == 'schedule'">
-        <h2>Tweet Every: </h2>
 
         <cron-selection output="myCronOutput"></cron-selection>
 
