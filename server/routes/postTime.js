@@ -181,6 +181,10 @@ router.post('/word', function(req, res) {
         console.log('Error: ' + Error.message);
     });
 
+    stream.on('disconnect', function(message) {
+        console.log("Disconnect Message:", message);
+    });
+
     res.sendStatus(200).end();
 });
 
