@@ -158,8 +158,12 @@ router.post('/word', function(req, res) {
         return T.post('statuses/update', {status: replyText, in_reply_to_status_id: msgID}, function () {
             console.log('I tweeted the message');
         });
-
     });
+
+    stream.on('error', function(Error) {
+        console.log('Error: ' + Error.message);
+    });
+
     res.sendStatus(200).end();
 });
 

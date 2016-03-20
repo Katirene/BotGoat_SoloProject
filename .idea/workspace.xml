@@ -22,7 +22,7 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="modalStep1.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/modalStep1.html">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/templates/modalStep1.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="4.285714">
               <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
@@ -31,18 +31,8 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="modal.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/modal.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.071429">
-              <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="modalStep1Controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/controllers/modalStep1Controller.js">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/controllers/modalStep1Controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="39" column="7" selection-start-line="36" selection-start-column="32" selection-end-line="39" selection-end-column="7" />
@@ -52,7 +42,7 @@
         </entry>
       </file>
       <file leaf-file-name="modalController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/controllers/modalController.js">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/controllers/modalController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-11.074074">
               <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
@@ -62,7 +52,7 @@
         </entry>
       </file>
       <file leaf-file-name="homeController.js" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/controllers/homeController.js">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/controllers/homeController.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
@@ -72,7 +62,7 @@
         </entry>
       </file>
       <file leaf-file-name="modalStep2.html" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/modalStep2.html">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/templates/modalStep2.html">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="-1.3571428">
               <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
@@ -82,7 +72,7 @@
         </entry>
       </file>
       <file leaf-file-name="modalStep2Controller.js" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/controllers/modalStep2Controller.js">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/controllers/modalStep2Controller.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -92,7 +82,7 @@
         </entry>
       </file>
       <file leaf-file-name="clientapp.js" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/clientapp.js">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/clientapp.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="0" column="56" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
@@ -102,7 +92,7 @@
         </entry>
       </file>
       <file leaf-file-name="dataFactories.js" pinned="false" current-in-tab="false">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/factory/dataFactories.js">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/factory/dataFactories.js">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0">
               <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
@@ -111,11 +101,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
-        <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/.gitignore">
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="-0.0">
               <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".env" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/../BotGoat/.env">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.11746522">
+              <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -124,40 +124,41 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$/WebstormProjects/mkproj_solo" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$USER_HOME$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/views/scripts/clientapp.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts/clientapp.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/server/bot.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/package.json" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/node_modules/twit/lib/twitter.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/server/clock.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/views/templates/dashboard.html" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts/controllers/dashboardController.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/views/templates/modalStep3.html" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/views/templates/configBot.html" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts/controllers/configBotController.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts/controllers/modalStep3Controller.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/tweet.json" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/.env" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/views/templates/modal.html" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts/controllers/modalStep1Controller.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts/factory/dataFactories.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts/controllers/homeController.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/Procfile" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/server/routes/postTime.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/server/app.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/views/templates/header.html" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/styles/stylesheet.css" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/views/index.html" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts/controllers/modalController.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts/controllers/modalStep2Controller.js" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/views/templates/modalStep1.html" />
-        <option value="$USER_HOME$/WebstormProjects/mkproj_solo/public/views/templates/modalStep2.html" />
-        <option value="$USER_HOME$/WebstormProjects/BotGoat/.gitignore" />
+        <option value="$PROJECT_DIR$/public/views/scripts/clientapp.js" />
+        <option value="$PROJECT_DIR$/public/scripts/clientapp.js" />
+        <option value="$PROJECT_DIR$/server/bot.js" />
+        <option value="$PROJECT_DIR$/package.json" />
+        <option value="$PROJECT_DIR$/node_modules/twit/lib/twitter.js" />
+        <option value="$PROJECT_DIR$/server/clock.js" />
+        <option value="$PROJECT_DIR$/public/views/templates/dashboard.html" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/dashboardController.js" />
+        <option value="$PROJECT_DIR$/public/views/templates/modalStep3.html" />
+        <option value="$PROJECT_DIR$/public/views/templates/configBot.html" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/configBotController.js" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/modalStep3Controller.js" />
+        <option value="$PROJECT_DIR$/tweet.json" />
+        <option value="$PROJECT_DIR$/.env" />
+        <option value="$PROJECT_DIR$/public/views/templates/modal.html" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/modalStep1Controller.js" />
+        <option value="$PROJECT_DIR$/public/scripts/factory/dataFactories.js" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/homeController.js" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/server/routes/postTime.js" />
+        <option value="$PROJECT_DIR$/server/app.js" />
+        <option value="$PROJECT_DIR$/public/views/templates/header.html" />
+        <option value="$PROJECT_DIR$/public/styles/stylesheet.css" />
+        <option value="$PROJECT_DIR$/public/views/index.html" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/modalController.js" />
+        <option value="$PROJECT_DIR$/public/scripts/controllers/modalStep2Controller.js" />
+        <option value="$PROJECT_DIR$/public/views/templates/modalStep1.html" />
+        <option value="$PROJECT_DIR$/public/views/templates/modalStep2.html" />
+        <option value="$PROJECT_DIR$/../BotGoat/.gitignore" />
+        <option value="$PROJECT_DIR$/../BotGoat/.env" />
       </list>
     </option>
   </component>
@@ -198,6 +199,12 @@
     <panes>
       <pane id="ProjectPane">
         <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mkproj_solo" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+          </PATH>
           <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="mkproj_solo" />
@@ -410,14 +417,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$USER_HOME$/WebstormProjects/mkproj_solo/public/styles" />
-      <recent name="$USER_HOME$/WebstormProjects/mkproj_solo/public/img" />
-      <recent name="$USER_HOME$/WebstormProjects/mkproj_solo/public/vendors" />
+      <recent name="$PROJECT_DIR$/public/styles" />
+      <recent name="$PROJECT_DIR$/public/img" />
+      <recent name="$PROJECT_DIR$/public/vendors" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$USER_HOME$/WebstormProjects/mkproj_solo/public/scripts" />
-      <recent name="$USER_HOME$/WebstormProjects/mkproj_solo/public" />
-      <recent name="$USER_HOME$/WebstormProjects/mkproj_solo/public/img" />
+      <recent name="$PROJECT_DIR$/public/scripts" />
+      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/public/img" />
     </key>
   </component>
   <component name="RunManager">
@@ -459,7 +466,7 @@
     </configuration>
     <configuration default="true" type="mocha-javascript-test-runner" factoryName="Mocha">
       <node-options />
-      <working-directory>$USER_HOME$/WebstormProjects/mkproj_solo</working-directory>
+      <working-directory>$PROJECT_DIR$</working-directory>
       <pass-parent-env>true</pass-parent-env>
       <envs />
       <ui>bdd</ui>
@@ -482,7 +489,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1920" height="1097" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -490,7 +497,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32920355" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.24960506" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3283582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -528,42 +535,42 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/Procfile">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/styles/stylesheet.css">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/styles/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="21" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/server/app.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/server/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="29" selection-start-line="10" selection-start-column="29" selection-end-line="10" selection-end-column="29" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/node_modules/twit/lib/twitter.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/node_modules/twit/lib/twitter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="462" column="21" selection-start-line="462" selection-start-column="21" selection-end-line="462" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/package.json">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/index.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="50" />
@@ -571,54 +578,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/vendors/angular.min.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/vendors/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/images/RobotGoat1Transparent.png">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/images/RobotGoat1Transparent.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/header.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="32" selection-start-line="2" selection-start-column="32" selection-end-line="2" selection-end-column="32" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/clientapp.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/clientapp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="46" selection-start-line="0" selection-start-column="46" selection-end-line="0" selection-end-column="46" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/vendors/angular-route.min.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/vendors/angular-route.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/styles/stylesheet.css">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/styles/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="5" column="1" selection-start-line="5" selection-start-column="1" selection-end-line="5" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/package.json">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/index.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -626,120 +633,113 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/vendors/angular.min.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/vendors/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/images/RobotGoat1Transparent.png">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/images/RobotGoat1Transparent.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/header.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="50" selection-start-line="0" selection-start-column="50" selection-end-line="0" selection-end-column="50" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/clientapp.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/clientapp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="21" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/vendors/angular.min.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/vendors/angular.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/images/RobotGoat1Transparent.png">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/images/RobotGoat1Transparent.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/vendors/bootstrap.min.css">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/vendors/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/vendors/angular-bootstrap.min.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/vendors/angular-bootstrap.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/vendors/angular-route.min.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/vendors/angular-route.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/vendors/angular-animate.min.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/vendors/angular-animate.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/vendors/datetime-picker.min.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/vendors/datetime-picker.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/package.json">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-13.571428">
           <caret line="20" column="9" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/node_modules/twit/lib/twitter.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/node_modules/twit/lib/twitter.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.37619698">
           <caret line="457" column="0" selection-start-line="457" selection-start-column="0" selection-end-line="457" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/images/borisBoat.png">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/images/borisBoat.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/modalStep3.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/templates/modalStep3.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/.env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/server/routes/postSchedule.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/server/routes/postSchedule.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/tweet.json">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/tweet.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="10" column="28" selection-start-line="10" selection-start-column="28" selection-end-line="10" selection-end-column="28" />
@@ -747,7 +747,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/Procfile">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/Procfile">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -755,7 +755,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/server/routes/postTime.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/server/routes/postTime.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="205" column="3" selection-start-line="205" selection-start-column="3" selection-end-line="205" selection-end-column="3" />
@@ -763,7 +763,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/server/clock.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/server/clock.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="15" selection-end-column="23" />
@@ -771,7 +771,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/server/app.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/server/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
@@ -779,12 +779,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/styles/fence.jpg">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/styles/fence.jpg">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/header.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/templates/header.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-2.0357144">
           <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
@@ -792,7 +792,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/styles/stylesheet.css">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/styles/stylesheet.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-16.071428">
           <caret line="49" column="22" selection-start-line="49" selection-start-column="22" selection-end-line="49" selection-end-column="22" />
@@ -800,7 +800,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/index.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/index.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-10.857142">
           <caret line="35" column="10" selection-start-line="35" selection-start-column="10" selection-end-line="35" selection-end-column="10" />
@@ -808,7 +808,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/controllers/modalStep3Controller.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/controllers/modalStep3Controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="1" column="0" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
@@ -816,7 +816,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/modal.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/templates/modal.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-4.071429">
           <caret line="6" column="23" selection-start-line="6" selection-start-column="23" selection-end-line="6" selection-end-column="23" />
@@ -824,7 +824,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/controllers/modalStep1Controller.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/controllers/modalStep1Controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="39" column="7" selection-start-line="36" selection-start-column="32" selection-end-line="39" selection-end-column="7" />
@@ -832,7 +832,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/controllers/modalController.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/controllers/modalController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.074074">
           <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="4" />
@@ -840,7 +840,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/controllers/modalStep2Controller.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/controllers/modalStep2Controller.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="22" column="0" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
@@ -848,7 +848,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/clientapp.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/clientapp.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="56" selection-start-line="0" selection-start-column="56" selection-end-line="0" selection-end-column="56" />
@@ -856,7 +856,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/factory/dataFactories.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/factory/dataFactories.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="65" column="33" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="33" />
@@ -864,7 +864,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/scripts/controllers/homeController.js">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/scripts/controllers/homeController.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="36" column="5" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
@@ -872,7 +872,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/modalStep1.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/templates/modalStep1.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="4.285714">
           <caret line="10" column="18" selection-start-line="10" selection-start-column="18" selection-end-line="10" selection-end-column="18" />
@@ -880,7 +880,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/public/views/templates/modalStep2.html">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/public/views/templates/modalStep2.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.3571428">
           <caret line="2" column="14" selection-start-line="2" selection-start-column="14" selection-end-line="2" selection-end-column="14" />
@@ -888,10 +888,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/WebstormProjects/BotGoat/.gitignore">
+    <entry file="file://$PROJECT_DIR$/../BotGoat/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
           <caret line="0" column="4" selection-start-line="0" selection-start-column="4" selection-end-line="0" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../BotGoat/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11746522">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
