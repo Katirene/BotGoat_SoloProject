@@ -23,10 +23,12 @@ var params = {
 };
 
 var cronData = '';
-var currentCron = null;
+var currentCron;
 var counter = 0;
 var tweetMode = '';
-var pause;
+var pause = false;
+var oldStatusText = '';
+var stream;
 
 
 
@@ -34,7 +36,7 @@ var pause;
 
 router.put('/', function(req, res) {
     console.log("pause button:", req.body);
-    if (currentCron != null) {
+    if (currentCron) {
         pause = req.body.pause;
         if (pause == true) {
             currentCron.stop();
@@ -42,6 +44,15 @@ router.put('/', function(req, res) {
             currentCron.start();
         }
     }
+    if (stream) {
+        pause = req.body.pause;
+        if (pause == true) {
+            stream.stop();
+        } else {
+            stream.start();
+        }
+    }
+
     res.status(200).end();
 });
 
@@ -49,7 +60,7 @@ router.put('/', function(req, res) {
 var botData = null;
 
 
-//currently not using this route GET tweets.  Swapped out the front end with an i frame.
+//currently not using function to get my latest tweet from twitter.  Swapped out the front end with an i frame.
 function getTweet() {
     console.log('getTweet()');
 
@@ -73,6 +84,7 @@ function getTweet() {
     return promise;
 }
 
+//currently now using this get call.
 router.get('/', function(req, res) {
     getTweet().then(function(result) {
         console.log("here are the botData in router:", botData);
@@ -84,7 +96,7 @@ router.get('/', function(req, res) {
 //Post a tweet on a schedule.
 router.post('/schedule', function(req, res) {
         //resetting pause to undefined (if not already.)
-        pause;
+        pause = false;
         console.log('pause:', pause);
 
         cronData = req.body.cronData;
@@ -116,30 +128,37 @@ router.post('/schedule', function(req, res) {
 
 //route that handles posting to twitter in response to a specific word search
 router.post('/word', function(req, res) {
-    //resetting pause to undefined (if not already.)
-    pause;
-    console.log('pause:', pause);
+    console.log('inside the post/word route');
+    //reset pause to original state
+    pause = false;
 
+    //grab inputted search params and tweet text.
+    //not checking to see if it matches the global statusText.
     var statusText = req.body.tweetStatus;
     var tweetSearch = req.body.tweetSearch;
 
-    console.log('inside the post/word route');
+    //listen for tweets that match the #tweetSearch. This is the global var stream that is paused inside the put route.
+    stream = T.stream('statuses/filter', {track: '#' + tweetSearch, language: 'en' });
 
-    var stream = T.stream('statuses/filter', {track: '#' + tweetSearch, language: 'en' });
-
+    //when a matching tweet is found run function. response data is in eventMsg
     stream.on('tweet', function (eventMsg) {
-        if (pause == true) {
-            console.log(eventMsg);
-            var msg = eventMsg.user.text;
-            console.log(eventMsg.user);
-            var screenName = eventMsg.user.screen_name;
-            var msgID = eventMsg.user.id_str;
-            console.log(msgID);
-            var replyText = '@' + screenName + ' ' + statusText;
-            return T.post('statuses/update', {status: replyText, in_reply_to_status_id: msgID}, function () {
-                console.log('I tweeted the message');
-            });
-        }
+        console.log(eventMsg);
+
+        //using the msgID to respond to a tweet in the same conversation thread
+        var msg = eventMsg.user.text;
+        console.log(eventMsg.user);
+        var screenName = eventMsg.user.screen_name;
+        var msgID = eventMsg.id_str;
+        console.log(msgID);
+
+        //package up a replyText to tweet out.
+        var replyText = '@' + screenName + ' ' + statusText;
+
+        //send a post/ update to twitter with the response to matching words.
+        return T.post('statuses/update', {status: replyText, in_reply_to_status_id: msgID}, function () {
+            console.log('I tweeted the message');
+        });
+
     });
     res.sendStatus(200).end();
 });
@@ -149,27 +168,32 @@ router.post('/word', function(req, res) {
 //route that handles tweeting when the bot is at mentioned.
 router.post('/mention', function(req, res) {
     console.log('inside mention route');
-    //resetting pause to undefined (if not already.)
-    pause = undefined;
-    console.log('pause:', pause);
+    //reset the pause to false.
+    pause = false;
 
+    //grab the text of the tweet.
     var statusText = req.body.tweetStatus;
 
-    var stream = T.stream('statuses/filter', {track: '@BotGoatBasics'});
+    //check to make sure the new tweet on mention is different then the previous one.
+    if (statusText != oldStatusText) {
+        stream = T.stream('statuses/filter', {track: '@BotGoatBasics'});
+    }
 
+    //Update the 'cashed statusText'.  oldStatusText keeps the current tweet. saved globally.
+    oldStatusText = statusText;
 
+    //listen for a tweet to mention @BotGoatBasics
     stream.on('tweet', function (tweetEvent) {
 
+        //only using the screen name of the person who mentioned the bot and the tweetId so that this response stays in the same conversation thread.
         var reply_to = tweetEvent.in_reply_to_screen_name;
-        // Check to see if this was, in fact, a reply to you
-            // Get the username and content of the tweet
-            var name = tweetEvent.user.screen_name;
-            var txt = tweetEvent.text;
-            var reply = '@'+ name + ' ' + statusText;
-            var tweetId = tweetEvent.id_str;
+        var name = tweetEvent.user.screen_name;
+        var txt = tweetEvent.text;
+        var reply = '@'+ name + ' ' + statusText;
+        var tweetId = tweetEvent.id_str;
             console.log(reply);
-            return T.post('statuses/update', {status: reply, in_reply_to_status_id: tweetId}, tweeted);
-        //return T.post('statuses/update', {status: reply}, tweeted);
+        //Tweet the response.
+        return T.post('statuses/update', {status: reply, in_reply_to_status_id: tweetId}, tweeted);
 
     });
 
