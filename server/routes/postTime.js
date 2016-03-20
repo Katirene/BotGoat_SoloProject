@@ -162,10 +162,19 @@ router.post('/word', function(req, res) {
 
     stream.on('connect', function(request) {
        console.log("Stream Connecting...");
+        console.log('Request:', request);
     });
 
     stream.on('connected', function(response) {
         console.log("Stream Connected");
+    });
+
+    stream.on('warning', function(message) {
+        console.log("Warning: " + message);
+    });
+
+    stream.on('limit', function(message) {
+        console.log("Limit: " + message);
     });
 
     stream.on('error', function(Error) {
