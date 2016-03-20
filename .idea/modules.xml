@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/mkproj_solo.iml" filepath="$PROJECT_DIR$/.idea/mkproj_solo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../BotGoat/.idea/mkproj_solo.iml" filepath="$PROJECT_DIR$/../BotGoat/.idea/mkproj_solo.iml" />
     </modules>
   </component>
 </project>
