@@ -173,7 +173,7 @@ router.post('/mention', function(req, res) {
 
     //grab the text of the tweet.
     var statusText = req.body.tweetStatus;
-    console.log('statusText:', statusText);
+    console.log('my statusText:', statusText);
 
     //check to make sure the new tweet on mention is different then the previous one.
     if (statusText != oldStatusText) {
