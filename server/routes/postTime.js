@@ -160,6 +160,14 @@ router.post('/word', function(req, res) {
         });
     });
 
+    stream.on('connect', function(request) {
+       console.log("Stream Connecting...");
+    });
+
+    stream.on('connected', function(response) {
+        console.log("Stream Connected");
+    });
+
     stream.on('error', function(Error) {
         console.log('Error: ' + Error.message);
     });
