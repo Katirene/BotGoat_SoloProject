@@ -177,7 +177,7 @@ router.post('/mention', function(req, res) {
 
     //check to make sure the new tweet on mention is different then the previous one.
     if (statusText != oldStatusText) {
-        stream = T.stream('statuses/filter', {track: '@BotGoatBasics'});
+        var stream = T.stream('statuses/filter', {track: '@BotGoatBasics'});
         console.log('stream:', stream);
     }
 
