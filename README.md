@@ -13,9 +13,9 @@ To fulfill my desire to work with automation an develop withing the bounds of te
 
 ##Available Tweeting Modes
 ```
-*Set tweets based on a time schedule.  All time based modes are in Cron format.
-*Listen for a specifc hashtag in the twitter stream and responsed with a predetermined status.
-*Listen for an @ mention in the twitter stream and respond with a predetermined status.
+* Set tweets based on a time schedule.  All time based modes are in Cron format.
+* Listen for a specifc hashtag in the twitter stream and responsed with a predetermined status.
+* Listen for an @ mention in the twitter stream and respond with a predetermined status.
 
 ```
 
@@ -29,4 +29,4 @@ To fulfill my desire to work with automation an develop withing the bounds of te
 
 ###Future Expansion
 1. Passport will be integrated.
-2. App will be modified so that multiple users can manage and confifure their bots from BotGoat.  Hosting and Deployment would shift from user to application.
+2. App will be modified so that multiple users can manage and configure their bots from BotGoat.  Hosting and Deployment would shift from user to application.
