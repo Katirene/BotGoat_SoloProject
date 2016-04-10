@@ -9,7 +9,7 @@
 ```
 
 ##Project Purpose
-'To fulfill my desire to work with automation an develop withing the bounds of technical limitation, I chose as my Solo project to expand on my passion for bots and build a UI configuration for a Twitter Bot'
+To fulfill my desire to work with automation an develop withing the bounds of technical limitation, I chose as my Solo project to expand on my passion for bots and build a UI configuration for a Twitter Bot.
 
 ##Available Tweeting Modes
 ```
@@ -23,7 +23,8 @@
 ```
 1. NPM install
 2. include at root directory your own .env file with your own consumer keys, secrets and API keys.
-3. Replace the {track: '@BotGoatBasics'} on line 205 in posttime.js with your own twitter handle so that the application listens an @ mention of your own bot.
+3. Replace the {track: '@BotGoatBasics'} on line 205 in posttime.js with your own twitter handle 
+   so that the application listens an @ mention of your own bot.
 ```
 
 ###Future Expansion
