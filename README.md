@@ -2,10 +2,10 @@
 
 ##TEAN Stack Application
 ```
-	*Twitter
-	*ExpressJS
-	*AngularJS
-	*NodeJS
+	* Twitter
+	* ExpressJS
+	* AngularJS
+	* NodeJS
 ```
 
 ##Project Purpose
