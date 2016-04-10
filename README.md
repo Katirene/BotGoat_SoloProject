@@ -24,7 +24,7 @@ To fulfill my desire to work with automation an develop withing the bounds of te
 1. NPM install
 2. Include at root directory your own .env file with your own consumer keys, secrets and API keys.
 3. Replace the {track: '@BotGoatBasics'} on line 205 in posttime.js with your own twitter handle 
-   so that the application listens an @ mention of your own bot.
+   so that the application listens for an @ mention of your own bot.
 ```
 
 ###Future Expansion
