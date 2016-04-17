@@ -1,1 +1,12 @@
+
+# Dependency directory
+node_modules
+
+
+# Users Environment Variables
 .env
+
+# Logs
+logs
+*.log
+tweet.json

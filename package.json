@@ -1,5 +1,5 @@
 {
-  "name": "mkproj_solo",
+  "name": "BotGoat",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -26,8 +26,6 @@
     "express-router": "0.0.1",
     "express-session": "^1.13.0",
     "fs": "0.0.2",
-    "later": "^1.2.0",
-    "morgan": "^1.7.0",
     "node": "0.0.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
