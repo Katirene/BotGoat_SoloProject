@@ -1,12 +1,13 @@
 # Dependency directory
-node_modules
+/node_modules
 
 
 # Users Environment Variables
 .env
 
 # Logs
-logs
+/logs
 *.log
+.idea
 tweet.json
 
