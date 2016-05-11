@@ -5,6 +5,7 @@ var bodyParser = require('body-parser');
 var Twit = require('twit');
 var CronJob = require('cron').CronJob;
 var async = require('async');
+var dotenv = require('dotenv').config();
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
